@@ -1,0 +1,26 @@
+.top-left {
+    top: 1%;
+    left: 1%;
+    position: absolute;
+    overflow-wrap: normal;
+    /* max-height: 80px; */
+    overflow-y: hidden;
+    transition: max-height 1.5s ease;
+}
+
+/* .top-left:hover {
+    max-height: 100%;
+    z-index: 10;
+} */
+
+.bottom-right {
+    bottom: 1%;
+    right: 1%;
+    position: absolute;
+}
+
+.top-right {
+    top: 1%;
+    right: 1%;
+    position: absolute;
+}
