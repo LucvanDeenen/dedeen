@@ -67,4 +67,4 @@ export default defineComponent({
     width: 25px;
     height: 25px;
 }
-</style>
+</style>@/service/EventBus

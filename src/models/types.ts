@@ -11,6 +11,7 @@ export enum TileType {
 
 export enum Screens {
   Home = 'home',
+  AboutMe = 'About Me',
   Modelling = 'Modelling',
   Menu = 'Menu',
   Clans = 'Clan Events'

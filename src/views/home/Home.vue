@@ -1,26 +1,33 @@
 <template>
-  <v-container class="d-flex align-center justify-center flex-column" fluid style="height: 100vh;">
-    <div class="main my-5">
-      <v-icon class="slow-fade-in fade glow" @click="loadPage">
-        mdi-scatter-plot-outline
-      </v-icon>
-    </div>
+  <div class="h-full w-full">
+    <div class="flex md:h-[33.33%] h-[10%]">
 
-    <div class="slide-track">
-      <div class="slide">
-        <a href="https://github.com/LucvanDeenen">
-          <v-icon class="mx-1 slider" size="x-large">
-            mdi-github
-          </v-icon>
-        </a>
-        <a href="https://www.linkedin.com/in/luc-van-deenen-561824194/">
-          <v-icon class="mx-1 slider" size="x-large">
-            mdi-linkedin
-          </v-icon>
-        </a>
+      <div class="border w-[33.33%] flex-1"></div>
+      <div class="border w-[300px] md:w-[500px] flex-8">
+        
       </div>
+      <div class="border w-[33.33%] flex-1"></div>
+
     </div>
-  </v-container>
+    <div class="flex md:h-[33.33%] h-[80%]">
+
+      <div class="border w-[33.33%] flex-1"></div>
+      <div class="border w-[300px] md:w-[500px] flex-8 flex items-center justify-center">
+        <h1 id="title" class="content">
+          {{ text[index] }}
+        </h1>
+      </div>
+      <div class="border w-[33.33%] flex-1"></div>
+
+    </div>
+    <div class="flex md:h-[33.33%] h-[10%]">
+
+      <div class="border w-[33.33%] flex-1"></div>
+      <div class="border w-[300px] md:w-[500px]  flex-8"></div>
+      <div class="border w-[33.33%] flex-1"></div>
+
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -28,29 +35,54 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Home',
-  methods: {
-    loadPage: function () {
-      this.$router.push('/menu');
+  data() {
+    return {
+      interval: null as ReturnType<typeof setInterval> | number | null,
+      animation: null as ReturnType<typeof setInterval> | number | null,
+      letters: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" as String,
+      text: [
+        "Luc_van_Deenen",
+        "Dedeen",
+        "Software_Engineer",
+        "Face.IT",
+      ] as String[],
+      index: 0,
     }
-  }
+  },
+
+  mounted() {
+    this.animateText();
+    this.interval = setInterval(() => {
+      this.index = (this.index + 1) % this.text.length;
+      this.animateText();
+    }, 10000);
+  },
+
+  methods: {
+    animateText: function () {
+      let iteration = 0;
+      this.animation = setInterval(() => {
+        const title = document.getElementById("title");
+        if (!title) return;
+
+        title.innerText = title.innerText.split("")
+          .map((letter, index) => {
+            if (index < iteration) return this.text[this.index][index]
+            if (letter == " " || letter == "_" || letter == ".") return letter;
+            return this.letters[Math.floor(Math.random() * this.letters.length)];
+          }).join("");
+
+        if (iteration > this.text[this.index].length) clearInterval(this.animation!);
+        iteration += 1 / 3;
+      }, 30);
+    }
+  },
 })
 </script>
 
 <style scoped lang="scss">
-.main {
-  .v-icon {
-    font-size: 100px;
-    text-shadow: 0 5px 15px rgba(255, 255, 255, 0);
-    transition: all 2s ease;
-
-    &:hover {
-      text-shadow: 0 5px 15px rgba(255, 255, 255, 0.8);
-    }
-  }
-}
-
-a {
-  color: white;
+h1 {
+  text-transform: uppercase;
+  font-size: 30px;
 }
 </style>
-  

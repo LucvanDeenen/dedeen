@@ -48,4 +48,4 @@ export default defineComponent({
         }
     }
 })
-</script>
+</script>@/service/EventBus

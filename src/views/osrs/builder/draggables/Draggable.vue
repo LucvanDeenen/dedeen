@@ -148,4 +148,4 @@ export default defineComponent({
 .card:hover {
   z-index: 10;
 }
-</style>
+</style>@/service/EventBus

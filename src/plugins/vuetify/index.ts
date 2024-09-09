@@ -6,7 +6,6 @@
 
 // Styles
 import '@mdi/font/css/materialdesignicons.css'
-import 'vuetify/styles'
 
 // Composables
 import { createVuetify } from 'vuetify'
@@ -22,28 +21,78 @@ export default createVuetify({
   theme: {
     defaultTheme: 'dark',
     themes: {
-      light: {
-        colors: {
-          primary: '#512DA8',
-          secondary: '#1F1A24',
-          background: '#212121',
-          secondaryBackground: '#0288D1',
-          selectable: '#1A237E',
-          selected: '#3D5AFE',
-          accent: '#757575',
-        },
-      },
       dark: {
         colors: {
-          primary: '#512DA8',
-          secondary: '#1F1A24',
-          background: '#212121',
-          secondaryBackground: '#311B92',
-          selectable: '#1A237E',
-          selected: '#37474F',
-          accent: '#757575',
+          background: '#1A1423',
+          accent: '#A49694',
+          primary: '#5DD39E',
+          hover: '#3A8965',
+          secondary: '#348AA7',
+          secondaryHover: '#2D738A',
+          error: '#CF6679',
+          success: '#3A8965',
+          warning: '#BCE784',
         }
-      }
+      },
     },
   },
+
+  aliases: {
+    VBtnLarge: components.VBtn,
+    VSection: components.VContainer
+  },
+
+  defaults: {
+    VSection: {
+      style: [
+        {
+          display: 'flex',
+          padding: '1rem',
+          marginBottom: '1rem',
+          alignContent: 'center',
+          justifyContent: 'center',
+          height: '100dvh',
+          maxHeight: '100dvh'
+        }
+      ]
+    },
+    VContainer: {
+      style: [
+        {
+          height: 'auto',
+          maxWidth: '100%',
+          margin: 0,
+          padding: 0
+        }
+      ]
+    },
+    VChip: {
+      style: [
+        {
+          margin: '0.1rem',
+        }
+      ]
+    },
+    VTextField: {
+      color: 'primary',
+      density: 'compact',
+      variant: 'outlined'
+    },
+    VCheckbox: {
+      style: 'textTransform: "capitalize";',
+      density: 'compact'
+    },
+    VBtn: {
+      style: 'margin-bottom: 0.5rem;',
+      color: 'primary',
+      variant: 'outlined',
+    },
+    VBtnLarge: {
+      style: 'margin-bottom: 0.5rem;',
+      color: 'primary',
+      size: 'x-large',
+      variant: 'outlined',
+    }
+  },
 })
+

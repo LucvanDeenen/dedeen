@@ -39,21 +39,6 @@ input[type=number]{
   -moz-appearance: textfield;
 }
 
-@font-face {
-  font-family: 'runescape_uf';
-  src: url('../assets/runescape_uf.woff') format('woff');
-}
-
-/* Custom global properties */
-.border {
-  border: 0.1px solid rgba(255, 255, 255, 0.233);
-  border-radius: 10px;
-}
-
-.tab {
-  margin-left: 2px;
-}
-
 .non-select {
   user-select: none;
   pointer-events: none;
@@ -61,14 +46,4 @@ input[type=number]{
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-}
-
-p {
-  font-size: smaller;
-}
-
-input::placeholder,
-.v-label {
-  -webkit-appearance: none !important; 
-  font-size: 12px !important;
 }
