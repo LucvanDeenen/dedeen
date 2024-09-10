@@ -56,7 +56,8 @@ const vuetify = createVuetify({
     VPage: {
       style: [
         {
-          height: 'auto'
+          height: 'auto',
+          width: 'auto'
         }
       ]
     },
