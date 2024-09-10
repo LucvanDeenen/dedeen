@@ -1,0 +1,25 @@
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes fade-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-slide-in {
+    animation: fade-slide-in 1s ease-out forwards;
+}

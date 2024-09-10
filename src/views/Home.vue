@@ -1,17 +1,18 @@
 <template>
-  <v-container>
-    
-  </v-container>
+  <v-view>
+    <intro-page></intro-page>
+  </v-view>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-export default defineComponent({
-  name: 'Home'
-})
-</script>
+import IntroPage from '@/components/pages/IntroPage.vue';
 
-<style scoped lang="scss">
-</style>
-  
+export default defineComponent({
+  name: 'Home',
+  components: {
+    IntroPage
+  }
+});
+</script>

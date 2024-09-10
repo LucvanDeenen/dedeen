@@ -39,20 +39,31 @@ const vuetify = createVuetify({
 
   aliases: {
     VBtnLarge: components.VBtn,
-    VSection: components.VContainer
+    VSection: components.VContainer,
+    VPage: components.VContainer,
+    VView: components.VContainer
   },
 
   defaults: {
+    VView: {
+      style: [
+        {
+          paddingTop: '45dvh',
+          minHeight: '100dvh'
+        }
+      ]
+    },
+    VPage: {
+      style: [
+        {
+          height: 'auto'
+        }
+      ]
+    },
     VSection: {
       style: [
         {
-          display: 'flex',
-          padding: '1rem',
           marginBottom: '1rem',
-          alignContent: 'center',
-          justifyContent: 'center',
-          height: '100dvh',
-          maxHeight: '100dvh'
         }
       ]
     },
