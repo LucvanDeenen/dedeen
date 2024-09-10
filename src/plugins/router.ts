@@ -1,6 +1,5 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
-import { Screens } from '../../models/types';
 
 const routes = [
   {
@@ -9,8 +8,8 @@ const routes = [
     children: [
       {
         path: '/',
-        name: Screens.Home,
-        component: () => import('@/views/home/Home.vue'),
+        name: 'Home',
+        component: () => import('@/views/Home.vue'),
       }
     ],
   },
