@@ -23,9 +23,9 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "postcss": "^8.4.45",
     "sass": "^1.68.0",
-    "typescript": "^5.0.0",
+    "typescript": "^5.6.2",
     "vite": "^4.2.0",
     "vite-plugin-vuetify": "^1.0.0",
-    "vue-tsc": "^1.2.0"
+    "vue-tsc": "^2.1.6"
   }
 }

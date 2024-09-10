@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["vuetify"],
+    "types": ["vuetify", "node"],
     "baseUrl": ".",
     "target": "ESNext",
     "useDefineForClassFields": true,
