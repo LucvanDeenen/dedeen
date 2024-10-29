@@ -24,6 +24,7 @@ const toggleDarkMode = () => {
 }
 
 const goHome = () => {
+  activeSection.value = 'about'
   app?.updateSection('home')
   emit('close')
 }
