@@ -3,8 +3,6 @@ const bio = {
   summary: `
     I'm a primairly backend software engineer with a passion for 
     building scalable applications and exploring new technologies.
-    With over 5 years of experience in full-stack development, 
-    I specialize in creating efficient, user-friendly solutions to complex problems.
   `,
   interests: [
     "Automation",
