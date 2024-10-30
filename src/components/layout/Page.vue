@@ -15,8 +15,8 @@ const app = inject<{
 <template>
   <section class="w-full flex-shrink-0 h-screen overflow-y-auto">
     <div v-if="title" class="sticky top-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
-      <div class="max-w-4xl mx-auto px-12 py-6 flex justify-between items-center">
-        <div class="flex flex-col items-start gap-2">
+      <div class="max-w-4xl mx-auto px-6 py-6 flex justify-between items-center">
+        <div class="flex flex-col items-start gap-4">
           <h2 class="section-title">{{ title }}</h2>
           <div class="flex items-center gap-2">
             <div class="h-1 w-12 bg-black dark:bg-white rounded-full"></div>
@@ -33,7 +33,7 @@ const app = inject<{
         </button>
       </div>
     </div>
-    <div class="max-w-4xl mx-auto px-12 py-12">
+    <div class="max-w-4xl mx-auto px-6 pb-24">
       <slot></slot>
     </div>
   </section>
