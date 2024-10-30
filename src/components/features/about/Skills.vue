@@ -3,7 +3,7 @@ interface SkillCategory {
   name: string
   skills: {
     name: string
-    level: number // 1-5
+    level: number
   }[]
 }
 

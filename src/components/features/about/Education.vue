@@ -9,25 +9,14 @@ interface Education {
 
 const education: Education[] = [
   {
-    school: "University of Technology",
-    degree: "Master of Science in Computer Science",
-    period: "2018 - 2020",
-    description: "Specialized in Machine Learning and Distributed Systems",
+    school: "ZUYD University of Applied Sciences",
+    degree: "Bachelor of Science",
+    period: "2017 - 2021",
+    description: "Specialized in Software Development with a focus on solution-driven design, research-based decision-making, and process-centered methodologies.",
     achievements: [
-      "Published research paper on distributed ML algorithms",
-      "Teaching Assistant for Advanced Algorithms course",
-      "4.0 GPA"
-    ]
-  },
-  {
-    school: "Tech Institute",
-    degree: "Bachelor of Science in Software Engineering",
-    period: "2014 - 2018",
-    description: "Focus on Software Architecture and Web Technologies",
-    achievements: [
-      "Dean's List all semesters",
-      "Led university hackathon team to first place",
-      "Completed internship at major tech company"
+      "Developed a POC Mobile App for the bycicle event \"Limburgs Mooiste\".",
+      "Developed a Language Processor that uses a dataset of books to guess the language the user is prompting it.",
+      "Created the game TicTacToe where the user can play against an AI, based on the MiniMax algorithms"
     ]
   }
 ]
@@ -37,9 +26,7 @@ const education: Education[] = [
   <section>
     <h3 class="text-2xl font-semibold mb-8 text-gray-800 dark:text-gray-200">Education</h3>
     <div class="space-y-6">
-      <div v-for="edu in education" 
-           :key="edu.school"
-           class="project-card">
+      <div v-for="edu in education" :key="edu.school">
         <div class="flex justify-between items-start mb-4">
           <div>
             <h4 class="text-xl font-semibold text-gray-900 dark:text-white">{{ edu.school }}</h4>
@@ -49,8 +36,7 @@ const education: Education[] = [
         </div>
         <p class="text-gray-700 dark:text-gray-300 mb-4">{{ edu.description }}</p>
         <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-          <li v-for="achievement in edu.achievements" 
-              :key="achievement">
+          <li v-for="achievement in edu.achievements" :key="achievement">
             {{ achievement }}
           </li>
         </ul>
