@@ -1,8 +1,11 @@
 <script setup lang="ts">
 const bio = {
   summary: `
-    I'm a primairly backend software engineer with a passion for 
-    building scalable applications and exploring new technologies.
+    Passionate software engineer skilled in solving complex problems 
+		and integrating innovative technologies to create impactful solutions. 
+		Experienced in enterprise software development, with a strong ability 
+		to adapt to and enhance existing codebases while consistently delivering 
+		high-quality results.
   `,
   interests: [
     "Automation",
@@ -10,6 +13,7 @@ const bio = {
     "Java Development",
     "Frontend",
     "Game Development",
+		"3D Modelling",
     "DevTools"
   ]
 }
