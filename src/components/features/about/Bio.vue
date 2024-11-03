@@ -4,7 +4,7 @@ const bio = {
     I’m a dedicated software engineer who enjoys tackling complex problems and 
 		integrating new technologies to build meaningful solutions. 
 		I have extensive experience in enterprise software development and
-		excel at working with and improving existing codebases while consistently delivering quality results.”
+		excel at working with and improving existing codebases while consistently delivering quality results.
   `,
   interests: [
     "Automation",
