@@ -7,8 +7,11 @@ const workHistory = [
     subtitle: "Software Engineer / Software Consultant",
     period: "2022 - Present",
     description: [
-      `Served as a consultant for VodafoneZiggo’s NaaS unit, progressing from an initial role as one of eight developers to becoming the lead developer, overseeing team operations and project delivery. 
-      Work encompassed a range of responsibilities, from automating processes to integrating new systems and contributing to the development of innovative solutions.`,
+      `I am currently working as a consultant for VodafoneZiggo’s NaaS unit, 
+			 where I starter as a member of the development team and progressed to lead developer, 
+			 overseeing team operations and project delivery. 
+			 My daily responsibilities include process automation, system integration, 
+			 and contributing to the development of innovative enterprise solutions.`,
       `Enhanced the functionality of 'Partner in Balans', a healthcare application, by implementing significant improvements across both the frontend and backend systems.`
     ],
     technologies: [
