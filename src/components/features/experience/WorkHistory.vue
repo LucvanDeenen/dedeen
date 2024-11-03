@@ -1,32 +1,41 @@
 <script setup lang="ts">
 import Timeline from '../../shared/Timeline.vue'
 
-const workHistory: any = []
-
-// const workHistory = [
-//   {
-//     title: "Tech Company A",
-//     subtitle: "Senior Software Engineer",
-//     period: "2022 - Present",
-//     description: [
-//       "Led development of core platform features",
-//       "Managed team of 5 developers",
-//       "Improved system performance by 40%"
-//     ],
-//     technologies: ["Vue", "TypeScript", "Node.js"]
-//   },
-//   {
-//     title: "Tech Company B",
-//     subtitle: "Full Stack Developer",
-//     period: "2020 - 2022",
-//     description: [
-//       "Developed and maintained multiple client applications",
-//       "Implemented CI/CD pipelines",
-//       "Reduced deployment time by 60%"
-//     ],
-//     technologies: ["React", "Python", "AWS"]
-//   }
-// ]
+const workHistory = [
+  {
+    title: "ilionx B.V.",
+    subtitle: "Software Engineer / Software Consultant",
+    period: "2022 - Present",
+    description: [
+      `Served as a consultant for VodafoneZiggo’s NaaS unit, progressing from an initial role as one of eight developers to becoming the lead developer, overseeing team operations and project delivery. 
+      Work encompassed a range of responsibilities, from automating processes to integrating new systems and contributing to the development of innovative solutions.`,
+      `Enhanced the functionality of 'Partner in Balans', a healthcare application, by implementing significant improvements across both the frontend and backend systems.`
+    ],
+    technologies: [
+      "Spring",
+      "Java",
+      "Kotlin",
+      "Typescript",
+      "Angular",
+      "Jenkins",
+      "AWS"
+    ]
+  },
+  {
+    title: "LUC B.V.",
+    subtitle: "Software Engineer",
+    period: "2021 - 2022",
+    description: [
+      "Contributed to the development and optimization of an in-house fat client application to streamline and enhance the production workflow.",
+      "Led the development of a new system architecture to revamp and modernize the fat client application."
+    ],
+    technologies: [
+      ".NET", 
+      "Vue.JS", 
+      "VB.NET"
+    ]
+  }
+]
 </script>
 
 <template>
