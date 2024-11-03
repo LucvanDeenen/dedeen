@@ -3,7 +3,7 @@ import Timeline from '../../shared/Timeline.vue'
 
 const workHistory = [
   {
-    title: "ilionx B.V.",
+    title: "ilionx Group B.V.",
     subtitle: "Software Engineer / Software Consultant",
     period: "2022 - Present",
     description: [
