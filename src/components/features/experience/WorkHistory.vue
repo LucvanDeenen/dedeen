@@ -8,7 +8,7 @@ const workHistory = [
     period: "2022 - Present",
     description: [
       `I am currently working as a consultant for VodafoneZiggo’s NaaS unit, 
-			 where I starter as a member of the development team and progressed to lead developer, 
+			 where I started as a member of the development team and progressed to lead developer, 
 			 overseeing team operations and project delivery. 
 			 My daily responsibilities include process automation, system integration, 
 			 and contributing to the development of innovative enterprise solutions.`,
