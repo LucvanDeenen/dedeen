@@ -11,27 +11,28 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Frontend",
     skills: [
-      { name: "Vue.js", level: 5 },
-      { name: "React", level: 4 },
-      { name: "TypeScript", level: 5 },
-      { name: "Tailwind CSS", level: 4 }
+      { name: "Vue.js", level: 4 },
+      { name: "TypeScript", level: 3 },
+      { name: "Angular", level: 2 },
+      { name: "React", level: 2 },
     ]
   },
   {
     name: "Backend",
     skills: [
-      { name: "Node.js", level: 5 },
-      { name: "Python", level: 4 },
-      { name: "PostgreSQL", level: 4 },
-      { name: "GraphQL", level: 3 }
+      { name: "Java", level: 5 },
+      { name: "Spring", level: 4 },
+      { name: "Kotlin", level: 3 },
+      { name: ".NET", level: 2 },
+      { name: "C#", level: 3 }
     ]
   },
   {
     name: "DevOps",
     skills: [
-      { name: "Docker", level: 4 },
-      { name: "AWS", level: 3 },
+      { name: "Docker", level: 5 },
       { name: "CI/CD", level: 4 },
+      { name: "AWS", level: 3 },
       { name: "Kubernetes", level: 3 }
     ]
   }

@@ -15,7 +15,7 @@ const education: Education[] = [
     description: "Specialized in Software Development with a focus on solution-driven design, research-based decision-making, and process-centered methodologies.",
     achievements: [
       "Developed a POC Mobile App for the bycicle event \"Limburgs Mooiste\".",
-      "Developed a Language Processor that uses a dataset of books to guess the language the user is prompting it.",
+      "Programmed a Language Processor that uses a dataset of books to guess the language the user is prompting it.",
       "Created the game TicTacToe where the user can play against an AI, based on the MiniMax algorithms"
     ]
   }
