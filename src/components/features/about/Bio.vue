@@ -1,11 +1,10 @@
 <script setup lang="ts">
 const bio = {
   summary: `
-    Passionate software engineer skilled in solving complex problems 
-		and integrating innovative technologies to create impactful solutions. 
-		Experienced in enterprise software development, with a strong ability 
-		to adapt to and enhance existing codebases while consistently delivering 
-		high-quality results.
+    I’m a dedicated software engineer who enjoys tackling complex problems and 
+		integrating new technologies to build meaningful solutions. 
+		I have extensive experience in enterprise software development and
+		excel at working with and improving existing codebases while consistently delivering quality results.”
   `,
   interests: [
     "Automation",
