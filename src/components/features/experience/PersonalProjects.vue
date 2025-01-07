@@ -3,7 +3,7 @@ import Timeline from '../../shared/Timeline.vue'
 
 const projects = [
   {
-    title: "Cooking App",
+    title: "Munch",
     links: {
       github: "https://github.com/LucvanDeenen/munch",
       demo: "https://cooking-d8911.web.app/"
