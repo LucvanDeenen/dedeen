@@ -8,7 +8,7 @@ import {
   XMarkIcon
 } from '@heroicons/vue/24/outline'
 
-const activeSection = ref('about')
+const activeSection = ref(null)
 const emit = defineEmits(['close'])
 const app: any = inject('app')
 
@@ -21,12 +21,6 @@ const scrollToSection = (sectionId: string) => {
 const toggleDarkMode = () => {
   isDark.value = !isDark.value
   document.documentElement.classList.toggle('dark')
-}
-
-const goHome = () => {
-  activeSection.value = 'about'
-  app?.updateSection('home')
-  emit('close')
 }
 
 const isDark = ref(false)

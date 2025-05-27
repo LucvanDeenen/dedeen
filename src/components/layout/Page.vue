@@ -3,7 +3,7 @@ import { Bars3Icon } from '@heroicons/vue/24/outline'
 import { inject } from 'vue'
 
 defineProps<{
-  title: string
+  title?: string
 }>()
 
 const app = inject<{ 
@@ -16,6 +16,7 @@ const app = inject<{
   <section class="w-full flex-shrink-0 h-screen overflow-y-auto">
     <div v-if="title" class="sticky top-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
       <div class="max-w-4xl mx-auto px-6 py-6 flex justify-between items-center">
+        <!-- Title and Subtitle -->
         <div class="flex flex-col items-start gap-4">
           <h2 class="section-title">{{ title }}</h2>
           <div class="flex items-center gap-2">
