@@ -8,9 +8,9 @@ import {
   XMarkIcon
 } from '@heroicons/vue/24/outline'
 
-const activeSection = ref(null)
-const emit = defineEmits(['close'])
+const activeSection = ref<string | null>(null)
 const app: any = inject('app')
+const emit = defineEmits(['close'])
 
 const scrollToSection = (sectionId: string) => {
   activeSection.value = sectionId
@@ -36,10 +36,11 @@ onMounted(() => {
 <template>
   <nav class="w-full h-full bg-gray-50 dark:bg-gray-800 p-12 
               border-r border-gray-200 dark:border-gray-700 transition-colors duration-300 z-40">
+              
     <!-- Close button for mobile -->
     <button 
       @click="$emit('close')"
-      class="lg:hidden absolute top-4 right-4 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 
+      class="absolute top-4 right-4 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 
              transition-colors duration-300">
       <XMarkIcon class="w-6 h-6 text-gray-900 dark:text-white" />
     </button>
@@ -51,7 +52,7 @@ onMounted(() => {
         <CommandLineIcon class="w-8 h-8 text-white dark:text-black transition-colors duration-300" />
       </button>
       <button 
-        @click="goHome"
+        @click="scrollToSection('home')"
         class="flex-1 text-left hover:opacity-75 transition-opacity duration-200">
         <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors duration-300">
           Luc van Deenen

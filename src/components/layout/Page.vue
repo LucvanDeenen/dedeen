@@ -33,6 +33,7 @@ const app = inject<{
       </button>
     </div>
 
+    <!-- Content -->
     <div class="px-4 py-4">
       <slot></slot>
     </div>

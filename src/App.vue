@@ -50,11 +50,15 @@ watch(activeSection, async (newSection) => {
     class="flex min-h-[100dvh] bg-white dark:bg-gray-900 transition-colors duration-300"
   >
     <!-- Navigation with transitions -->
-    <!-- <div
+    <div
       class="fixed left-0 top-0 h-[100dvh] lg:w-[30%] z-[51] transition-transform duration-500"
+      :class="[
+        isNavOpen ? '-translate-x-full' : 'lg:translate-x-0',
+        { '-translate-x-full': !isNavOpen },
+      ]"
     >
-      <Navigation @close="isNavOpen = false" />
-    </div> -->
+      <Navigation @close="toggleNav" />
+    </div>
 
     <!-- Main Content -->
     <div class="overflow-x-hidden transition-all duration-500 min-w-[300px]">
@@ -65,10 +69,16 @@ watch(activeSection, async (newSection) => {
     </div>
 
     <!-- Overlay for mobile nav -->
-    <!-- <div
-      v-if="isNavOpen && activeSection !== 'home'"
-      class="fixed inset-0 bg-black bg-opacity-50 lg:hidden z-50"
-      @click="isNavOpen = false"
-    ></div> -->
+    <div
+      v-if="!isNavOpen"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50"
+      @click="toggleNav"
+    ></div>
   </div>
 </template>
+
+<style>
+.ml-\[30\%\] {
+  margin-left: 30%;
+}
+</style>
