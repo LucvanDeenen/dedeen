@@ -54,21 +54,44 @@ onUnmounted(() => {
     >
       <div class="flex flex-col items-center">
         <h1
-          class="text-6xl font-bold bg-gradient-to-r uppercase from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400 bg-clip-text text-transparent"
+          class="text-6xl font-bold text-black uppercase bg-clip-text text-transparent"
         >
           Welcome to
         </h1>
         <h1
           id="title"
-          class="text-6xl font-bold bg-gradient-to-r uppercase from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400 bg-clip-text text-transparent"
+          class="text-6xl font-bold text-black uppercase bg-clip-text text-transparent"
         >
           {{ textArray[textIndex] }}
         </h1>
       </div>
 
-      <p class="text-xl mt-12 text-gray-600 dark:text-gray-400 mb-12 max-w-2xl">
-        A passionate <a class="hover:text-black dark:hover:text-white transition-colors duration-200 cursor-pointer" @click="app?.updateSection('about')">software engineer</a>.
-      </p>
+      <div class="text-start mb-5">
+        <p class="text-xl mt-12 text-gray-600 mb-1 max-w-2xl">
+          A passionate
+          <a
+            class="hover:text-black dark:hover:text-white text-orange transition-colors duration-200 cursor-pointer"
+            @click="app?.updateSection('about')"
+            >software engineer</a
+          >.
+        </p>
+        <p class="text-xl text-gray-600 mb-1 max-w-2xl">
+          Learn about my
+          <a
+            class="hover:text-black dark:hover:text-white transition-colors duration-200 cursor-pointer"
+            @click="app?.updateSection('experience')"
+            >projects</a
+          >.
+        </p>
+        <p class="text-xl text-gray-600 mb-1 max-w-2xl">
+          A passionate
+          <a
+            class="hover:text-black dark:hover:text-white transition-colors duration-200 cursor-pointer"
+            @click="app?.updateSection('contact')"
+            >software engineer</a
+          >.
+        </p>
+      </div>
 
       <div class="flex gap-6 text-gray-600 dark:text-gray-400">
         <a
