@@ -7,8 +7,6 @@ import AboutPage from "./components/pages/AboutPage.vue";
 import ContactPage from "./components/pages/ContactPage.vue";
 
 const activeSection = ref("home");
-const isNavOpen = ref(false);
-
 const updateSection = (sectionId: string) => {
   activeSection.value = sectionId;
   if (sectionId === "home") {
@@ -16,8 +14,14 @@ const updateSection = (sectionId: string) => {
   }
 };
 
-import { watch, nextTick } from "vue";
+const isNavOpen = ref(false);
+const toggleNav = () => {
+  isNavOpen.value = !isNavOpen.value;
+};
 
+provide("app", { updateSection, toggleNav });
+
+import { watch, nextTick } from "vue";
 watch(activeSection, async (newSection) => {
   await nextTick();
   let el: HTMLElement | null = null;
@@ -39,12 +43,6 @@ watch(activeSection, async (newSection) => {
     el.scrollIntoView({ behavior: "smooth" });
   }
 });
-
-const toggleNav = () => {
-  isNavOpen.value = !isNavOpen.value;
-};
-
-provide("app", { updateSection, toggleNav });
 </script>
 
 <template>
@@ -74,9 +72,3 @@ provide("app", { updateSection, toggleNav });
     ></div> -->
   </div>
 </template>
-
-<style>
-.ml-\[30\%\] {
-  margin-left: 30%;
-}
-</style>

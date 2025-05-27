@@ -34,7 +34,7 @@ const app = inject<{
         </button>
       </div>
     </div>
-    <div class="max-w-4xl mx-auto px-6 pb-24">
+    <div >
       <slot></slot>
     </div>
   </section>
