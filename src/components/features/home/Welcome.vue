@@ -1,11 +1,25 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
+import { ChevronDoubleRightIcon } from "@heroicons/vue/24/outline";
 import CodeBlock from "../../shared/CodeBlock.vue";
 
-const textArray: Array<String> = ["Dedeen", "dev.io"];
-const letters: String =
-  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+type Title = {
+  domain: string;
+  tld: string;
+};
+
+const letters: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const textIndex = ref(0);
+const textArray: Array<Title> = [
+  {
+    domain: "dedeen",
+    tld: "nl",
+  },
+  {
+    domain: "sjoelen-39112.web",
+    tld: "app",
+  },
+];
 
 let interval: ReturnType<typeof setInterval> | null = null;
 let animation: ReturnType<typeof setInterval> | null = null;
@@ -19,13 +33,13 @@ const animateText = (title: HTMLElement) => {
     title.innerText = title.innerText
       .split("")
       .map((letter, index) => {
-        if (index < iteration) return textArray[textIndex.value][index];
+        if (index < iteration) return textArray[textIndex.value].domain[index];
         if (letter === " " || letter === "_" || letter === ".") return letter;
         return letters[Math.floor(Math.random() * letters.length)];
       })
       .join("");
 
-    if (iteration > textArray[textIndex.value].length)
+    if (iteration > textArray[textIndex.value].domain.length)
       clearInterval(animation!);
     iteration += 1 / 3;
   }, 50);
@@ -52,19 +66,22 @@ onUnmounted(() => {
   >
     <!-- Title -->
     <div class="w-full text-start py-2 flex justify-between">
-      <h1 class="text-6xl text-slate-100 font-bold uppercase bg-clip-text">
-        <span> > </span>
-        <span id="title">
-          {{ textArray[textIndex] }}
-        </span>
-      </h1>
+      <div class="flex">
+        <ChevronDoubleRightIcon class="w-12 h-12 mr-1 text-yellow-500" />
+        <h1
+          class="text-5xl text- text-slate-100 font-bold uppercase bg-clip-text relative"
+        >
+          <span id="title" class="link hover:cursor-pointer">
+            {{ textArray[textIndex].domain }} </span
+          >.<span class="text-yellow-500">{{ textArray[textIndex].tld }}</span>
+        </h1>
+      </div>
 
-      <!-- Quick links -->
-      <div class="text-gray-600 dark:text-gray-400 flex gap-2 items-center">
+      <div class="text-gray-600 flex gap-2 items-center">
         <a
           href="https://github.com/LucvanDeenen"
           target="_blank"
-          class="hover:text-black dark:hover:text-white transition-colors duration-200"
+          class="hover:text-white transition-colors duration-200"
         >
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
             <path
@@ -75,7 +92,7 @@ onUnmounted(() => {
         <a
           href="https://www.linkedin.com/in/luc-van-deenen-561824194"
           target="_blank"
-          class="hover:text-black dark:hover:text-white transition-colors duration-200"
+          class="hover:text-white transition-colors duration-200"
         >
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
             <path
@@ -89,36 +106,33 @@ onUnmounted(() => {
     <!-- Links -->
     <div class="w-full">
       <CodeBlock
-        section="about"
-        link="aboutMe"
-        description="About me as a developer"
-      />
-      <CodeBlock
-        section="experience"
-        link="myProjects"
-        description="My work and projects"
-      />
-      <CodeBlock
-        section="contact"
-        link="contact"
-        description="My information to reach out to me"
+        :block="[
+          {
+            section: 'about',
+            link: 'aboutMe',
+            description: 'About me as a developer',
+          },
+          {
+            section: 'experience',
+            link: 'myProjects',
+            description: 'My work and projects',
+          },
+          {
+            section: 'contact',
+            link: 'contact',
+            description: 'My information to reach out to me',
+          },
+        ]"
       />
     </div>
   </section>
 </template>
 
 <style scoped>
-.bg-grid {
-  min-height: 100vh;
-  background-image: linear-gradient(#9e9d9d 1px, transparent 1px),
-    linear-gradient(90deg, #9e9d9d 1px, transparent 1px);
-  background-size: 100px 100px;
-  background-position: center;
-  -webkit-mask-image: radial-gradient(
-    ellipse at center,
-    black 60%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+.link:after {
+  @apply content-[''] text-yellow-500 absolute bottom-0 left-0 right-0 h-0.5 bg-current transition-transform duration-100 scale-x-0 origin-left;
+}
+.link:hover::after {
+  @apply scale-x-100;
 }
 </style>
