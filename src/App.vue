@@ -47,7 +47,7 @@ watch(activeSection, async (newSection) => {
 
 <template>
   <div
-    class="flex min-h-[100dvh] transition-colors duration-300"
+    class="flex min-h-[100dvh]"
   >
     <!-- Navigation with transitions -->
     <!-- <div
@@ -68,7 +68,7 @@ watch(activeSection, async (newSection) => {
     ></div> -->
 
     <!-- Main Content -->
-    <div class="overflow-x-hidden transition-all duration-500 min-w-[300px]">
+    <div class="overflow-x-hidden transition-all min-w-[200px]">
       <HomePage id="home-page" />
       <AboutPage id="about-page" />
       <ExperiencePage id="experience-page" />
