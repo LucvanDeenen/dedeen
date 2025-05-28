@@ -4,7 +4,6 @@ import {
   BriefcaseIcon,
   UserIcon,
   EnvelopeIcon,
-  CommandLineIcon,
   XMarkIcon,
 } from "@heroicons/vue/24/outline";
 
