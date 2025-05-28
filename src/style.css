@@ -10,7 +10,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-900 text-white font-inter;
+    @apply bg-neutral-900 text-white font-cascadia;
   }
 }
 

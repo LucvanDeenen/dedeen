@@ -49,7 +49,7 @@ onUnmounted(() => {
 <template>
   <section class="w-full h-full flex flex-shrink-1 flex-col items-center justify-center">
     <!-- Title -->
-    <div class="mt-12 items-center">
+    <div class="mt-12">
       <h1 class="text-6xl text-white font-bold uppercase bg-clip-text">
         <span> > </span>
         <span id="title">

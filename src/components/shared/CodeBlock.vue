@@ -13,8 +13,7 @@ defineProps<{
   <div class="rounded bg-neutral-800 min-w-[500px] px-1 py-1 my-2">
     <!-- Description -->
     <p class="text-green-700">
-      <span class="text-slate-600 mr-2">1</span>
-      # {{ description }}
+      <span class="text-slate-600 mr-2">1</span># {{ description }}
     </p>
 
     <!-- Link -->
@@ -25,7 +24,7 @@ defineProps<{
         @click="app?.updateSection(section)"
       >
         {{ link }}<span class="text-yellow-500">()</span>
-        <br/>
+        <br />
       </a>
     </p>
   </div>

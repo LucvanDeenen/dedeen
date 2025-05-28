@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        cascadia: ['Cascadia Mono', 'sans-serif'],
       },
     },
   },
