@@ -47,7 +47,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="w-full h-full flex flex-col items-center justify-center">
+  <section class="w-full h-full flex flex-shrink-1 flex-col items-center justify-center">
     <!-- Title -->
     <div class="mt-12 items-center">
       <h1 class="text-6xl text-white font-bold uppercase bg-clip-text">
@@ -62,20 +62,17 @@ onUnmounted(() => {
     <div class="mt-12">
       <CodeBlock
         section="about"
-        text="A passionate"
-        link="software engineer"
+        link="aboutMe"
         description="About me as a developer"
       />
       <CodeBlock
         section="experience"
-        text="Learn about my"
-        link="projects"
+        link="myProjects"
         description="My work and projects"
       />
       <CodeBlock
         section="contact"
-        text="My"
-        link="contact details"
+        link="contact"
         description="My information to reach out to me"
       />
     </div>

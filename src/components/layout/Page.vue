@@ -31,7 +31,7 @@ const app = inject<{
     </div>
 
     <!-- Content -->
-    <div class="px-4 py-4">
+    <div class="px-4 py-4 h-full">
       <slot></slot>
     </div>
   </section>
