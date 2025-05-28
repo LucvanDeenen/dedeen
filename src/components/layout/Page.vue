@@ -15,10 +15,7 @@ const app = inject<{
 <template>
   <section class="w-full h-screen overflow-y-auto">
     <!-- Header -->
-    <div
-      v-if="title"
-      class="sticky top-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm"
-    >
+    <div v-if="title" class="sticky top-0 z-40 backdrop-blur-sm">
       <!-- Title and Subtitle -->
       <div class="px-4 py-4">
         <h2 class="section-title">{{ title }}</h2>
@@ -27,9 +24,9 @@ const app = inject<{
       <!-- Mobile Nav Toggle -->
       <button
         @click="app?.toggleNav?.()"
-        class="lg:hidden p-2 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
+        class="lg:hidden p-2 transition-colors duration-300"
       >
-        <Bars3Icon class="w-6 h-6 text-gray-900 dark:text-white" />
+        <Bars3Icon class="w-6 h-6" />
       </button>
     </div>
 

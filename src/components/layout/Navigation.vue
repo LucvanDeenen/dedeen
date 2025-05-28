@@ -33,14 +33,6 @@ const scrollToSection = (sectionId: string) => {
 
     <div class="flex items-center gap-4 mb-12">
       <button
-        @click="toggleDarkMode"
-        class="w-12 h-12 bg-black dark:bg-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
-      >
-        <CommandLineIcon
-          class="w-8 h-8 text-white dark:text-black transition-colors duration-300"
-        />
-      </button>
-      <button
         @click="scrollToSection('home')"
         class="flex-1 text-left hover:opacity-75 transition-opacity duration-200"
       >

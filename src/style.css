@@ -9,7 +9,7 @@
 
 @layer base {
   body {
-    @apply bg-white text-gray-900 font-inter;
+    @apply bg-gray-900 text-white font-inter;
   }
 }
 
@@ -18,11 +18,11 @@
     @apply text-4xl font-bold text-gray-900 capitalize tracking-wide;
   }
   .project-card {
-    @apply bg-white rounded-lg shadow-md p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700;
+    @apply rounded-lg shadow-md p-8 hover:shadow-xl transition-all duration-300 border;
   }
   .nav-link {
-    @apply block px-4 py-2 text-gray-600 dark:text-gray-400 transition-all duration-200 
-           relative hover:text-black dark:hover:text-white capitalize tracking-wide text-sm font-medium;
+    @apply block px-4 py-2 text-gray-600 transition-all duration-200 
+           relative hover:text-black capitalize tracking-wide text-sm font-medium;
   }
   .nav-link::after {
     @apply content-[''] absolute bottom-0 left-4 right-4 h-0.5 bg-current scale-x-0 transition-transform duration-200 origin-left;
@@ -31,7 +31,7 @@
     @apply scale-x-100;
   }
   .nav-link.active {
-    @apply text-black dark:text-white;
+    @apply text-black;
   }
   .nav-link.active::after {
     @apply scale-x-100;

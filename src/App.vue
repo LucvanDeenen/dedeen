@@ -47,7 +47,7 @@ watch(activeSection, async (newSection) => {
 
 <template>
   <div
-    class="flex min-h-[100dvh] bg-white transition-colors duration-300"
+    class="flex min-h-[100dvh] transition-colors duration-300"
   >
     <!-- Navigation with transitions -->
     <!-- <div
