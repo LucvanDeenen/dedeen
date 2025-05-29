@@ -60,7 +60,7 @@ const lines = computed(() => {
   <div class="rounded bg-neutral-800 min-w-[300px] px-2 py-2 my-2">
     <div v-for="(line, index) in lines" class="code-block">
       <p class="flex">
-        <span class="text-slate-600 px-2 min-w-[35px]">{{ index + 1 }}</span>
+        <span class="text-slate-600 px-2 mr-2 min-w-[35px] text-right">{{ index + 1 }}</span>
         <div v-if="line.link !== ''">
           <a
             :class="{ tab: line.index == null }"
