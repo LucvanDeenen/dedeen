@@ -7,13 +7,12 @@ defineProps<{
 }>();
 
 const app = inject<{
-  updateSection: (section: string) => void;
   toggleNav?: () => void;
 }>("app");
 </script>
 
 <template>
-  <section class="w-full h-screen overflow-y-auto">
+  <section class="w-full min-h-screen">
     <!-- Header -->
     <div v-if="title" class="sticky top-0 z-40 backdrop-blur-sm">
       <!-- Title and Subtitle -->
@@ -31,8 +30,6 @@ const app = inject<{
     </div>
 
     <!-- Content -->
-    <div class="px-4 py-4 h-full">
-      <slot></slot>
-    </div>
+    <slot></slot>
   </section>
 </template>

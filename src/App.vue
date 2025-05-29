@@ -26,6 +26,9 @@ watch(activeSection, async (newSection) => {
   await nextTick();
   let el: HTMLElement | null = null;
   switch (newSection) {
+    case "home":
+      el = document.querySelector("#home-page");
+      break;
     case "about":
       el = document.querySelector("#about-page");
       break;
@@ -35,20 +38,16 @@ watch(activeSection, async (newSection) => {
     case "contact":
       el = document.querySelector("#contact-page");
       break;
-    case "home":
-      el = document.querySelector("#home-page");
-      break;
   }
   if (el) {
+
     el.scrollIntoView({ behavior: "smooth" });
   }
 });
 </script>
 
 <template>
-  <div
-    class="flex min-h-[100dvh]"
-  >
+  <div>
     <!-- Navigation with transitions -->
     <!-- <div
       class="fixed left-0 top-0 h-[100dvh] lg:w-[30%] z-[51] transition-transform duration-500"
@@ -68,7 +67,7 @@ watch(activeSection, async (newSection) => {
     ></div> -->
 
     <!-- Main Content -->
-    <div class="overflow-x-hidden transition-all min-w-[200px]">
+    <div class="overflow-x-hidden">
       <HomePage id="home-page" />
       <AboutPage id="about-page" />
       <ExperiencePage id="experience-page" />
