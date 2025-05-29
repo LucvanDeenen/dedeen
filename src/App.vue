@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, provide } from "vue";
-import Navigation from "./components/layout/Navigation.vue";
 import HomePage from "./components/pages/HomePage.vue";
 import ExperiencePage from "./components/pages/ExperiencePage.vue";
 import AboutPage from "./components/pages/AboutPage.vue";
@@ -40,7 +39,6 @@ watch(activeSection, async (newSection) => {
       break;
   }
   if (el) {
-
     el.scrollIntoView({ behavior: "smooth" });
   }
 });
@@ -53,18 +51,18 @@ watch(activeSection, async (newSection) => {
       class="fixed left-0 top-0 h-[100dvh] lg:w-[30%] z-[51] transition-transform duration-500"
       :class="[
         isNavOpen ? '-translate-x-full' : 'lg:translate-x-0',
-        { '-translate-x-full': !isNavOpen },
+        { '-translate-x-full': isNavOpen },
       ]"
     >
       <Navigation @close="toggleNav" />
     </div> -->
 
-    <!-- Overlay for mobile nav -->
-    <!-- <div
-      v-if="!isNavOpen"
+    <!-- Overlay for nav-->
+    <div
+      v-if="isNavOpen"
       class="fixed inset-0 bg-black bg-opacity-50 z-50"
       @click="toggleNav"
-    ></div> -->
+    ></div>
 
     <!-- Main Content -->
     <div class="overflow-x-hidden">

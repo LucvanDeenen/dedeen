@@ -7,10 +7,10 @@ import {
   XMarkIcon,
 } from "@heroicons/vue/24/outline";
 
-const activeSection = ref<string | null>(null);
-const app: any = inject("app");
 const emit = defineEmits(["close"]);
+const app: any = inject("app");
 
+const activeSection = ref<string | null>(null);
 const scrollToSection = (sectionId: string) => {
   activeSection.value = sectionId;
   app?.updateSection(sectionId);
