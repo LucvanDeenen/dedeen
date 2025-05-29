@@ -6,10 +6,10 @@ export type Block = {
   section: string;
 };
 
-const app: any = inject("app");
 defineProps<{
   block: Block[];
 }>();
+const app: any = inject("app");
 </script>
 
 <template>
