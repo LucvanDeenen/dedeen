@@ -75,7 +75,7 @@ onUnmounted(() => {
 
 <template>
   <Content
-    ref="welcome"
+    idRef="welcome"
     class="w-[80%] max-w-[750px] mx-auto h-screen flex flex-col justify-center"
   >
     <!-- Title -->
@@ -111,7 +111,7 @@ onUnmounted(() => {
     </div>
 
     <!-- Quick links -->
-    <div class="text-gray-600 flex gap-2 justify-center items-center mt-2">
+    <div class="text-gray-600 flex gap-3 justify-end mt-2">
       <a
         href="https://github.com/LucvanDeenen"
         target="_blank"

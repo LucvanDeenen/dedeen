@@ -5,7 +5,7 @@ import persona from "@/assets/persona.json";
 </script>
 
 <template>
-  <Content ref="work">
+  <Content idRef="work">
     <Timeline title="Work History" :items="persona.experience" />
   </Content>
 </template>

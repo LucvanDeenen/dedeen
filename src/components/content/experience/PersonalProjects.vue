@@ -5,7 +5,7 @@ import projects from "@/assets/projects.json";
 </script>
 
 <template>
-  <Content ref="projects">
+  <Content idRef="projects">
     <Timeline title="Personal Projects" :items="projects" />
   </Content>
 </template>

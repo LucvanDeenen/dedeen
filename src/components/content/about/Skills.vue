@@ -4,7 +4,7 @@ import persona from "@/assets/persona.json";
 </script>
 
 <template>
-  <Content ref="skills" class="mb-12">
+  <Content idRef="skills">
     <h3 class="text-gray-500">// Technical Skills</h3>
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       <div
