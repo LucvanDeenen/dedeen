@@ -13,25 +13,18 @@ defineProps<{
 </script>
 
 <template>
-  <div class="rounded bg-neutral-800 min-w-[500px] px-1 py-1 my-2 relative">
+  <div class="rounded bg-neutral-800 min-w-[300px] px-2 py-2 my-2">
     <div v-for="(line, index) in block">
       <p>
-        <span class="text-slate-600 mr-2">{{ index + 1 }}</span>
+        <span class="text-slate-600 px-2 mr-2">{{ index + 1 }}</span>
         <a
           class="text-yellow-200 relative transition-colors cursor-pointer link"
           @click="app?.updateSection(line.section)"
           >{{ line.link }}
         </a>
         <span class="text-yellow-500">()</span>
-        <span class="text-green-800"> // {{ line.description }} </span>
+        <span class="text-gray-500"> // {{ line.description }} </span>
       </p>
-
-      <!-- Actions -->
-      <div
-        class="top-right text-slate-600 hover:text-slate-400 hover:cursor-pointer"
-      >
-        copy
-      </div>
     </div>
   </div>
 </template>
@@ -42,8 +35,5 @@ defineProps<{
 }
 .link:hover::after {
   @apply scale-x-100;
-}
-.top-right {
-  @apply absolute top-0 right-2;
 }
 </style>

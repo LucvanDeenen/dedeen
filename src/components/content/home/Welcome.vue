@@ -6,29 +6,32 @@ import CodeBlock from "../../shared/CodeBlock.vue";
 type Title = {
   domain: string;
   tld: string;
+  description: string;
 };
 
 const letters: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const textIndex = ref(0);
+const currentDescription = ref("");
 const textArray: Array<Title> = [
   {
     domain: "dedeen",
     tld: "nl",
+    description: "You are here!",
   },
   {
     domain: "sjoelen-39112.web",
     tld: "app",
+    description: "A web application for party games!",
   },
 ];
 
 let interval: ReturnType<typeof setInterval> | null = null;
 let animation: ReturnType<typeof setInterval> | null = null;
 
-const animateText = (title: HTMLElement) => {
+const animateText = (title: HTMLElement, description: HTMLElement) => {
+  if (!title || !description) return;
+
   let iteration = 0;
-
-  if (!title) return;
-
   animation = setInterval(() => {
     title.innerText = title.innerText
       .split("")
@@ -39,18 +42,25 @@ const animateText = (title: HTMLElement) => {
       })
       .join("");
 
-    if (iteration > textArray[textIndex.value].domain.length)
+    if (iteration > textArray[textIndex.value].domain.length) {
       clearInterval(animation!);
+      description.classList.add("active");
+      currentDescription.value = textArray[textIndex.value].description
+    }
+
     iteration += 1 / 3;
   }, 50);
 };
 
 onMounted(() => {
   const title = document.getElementById("title");
-  animateText(title!);
+  const description = document.getElementById("description");
+
+  animateText(title!, description!);
   interval = setInterval(() => {
+    description?.classList.remove("active");
     textIndex.value = (textIndex.value + 1) % textArray.length;
-    animateText(title!);
+    animateText(title!, description!);
   }, 10000);
 });
 
@@ -61,21 +71,25 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section
-    class="w-[80%] max-w-[750px] mx-auto h-full flex flex-shrink-1 flex-col items-center justify-center"
+  <div
+    class="w-[80%] max-w-[750px] mx-auto h-screen flex flex-col justify-center"
   >
     <!-- Title -->
     <div class="w-full text-start py-2 flex justify-between">
-      <div class="flex">
-        <ChevronDoubleRightIcon class="w-12 h-12 mr-1 text-yellow-500" />
+      <a
+        class="flex min-w-[200px]"
+        target="_blank"
+        :href="`https://${textArray[textIndex].domain}.${textArray[textIndex].tld}`"
+      >
+        <ChevronDoubleRightIcon class="w-10 h-10 mr-1 text-yellow-500" />
         <h1
-          class="text-5xl text- text-slate-100 font-bold uppercase bg-clip-text relative"
+          class="text-4xl text- text-slate-100 font-bold uppercase bg-clip-text relative"
         >
           <span id="title" class="link hover:cursor-pointer">
             {{ textArray[textIndex].domain }} </span
           >.<span class="text-yellow-500">{{ textArray[textIndex].tld }}</span>
         </h1>
-      </div>
+      </a>
 
       <div class="text-gray-600 flex gap-2 items-center">
         <a
@@ -103,8 +117,13 @@ onUnmounted(() => {
       </div>
     </div>
 
+    <!-- Description -->
+    <div id="description" class="mx-2">
+      <p class="text-gray-500">"{{ currentDescription }}"</p>
+    </div>
+
     <!-- Links -->
-    <div class="w-full">
+    <div class="w-full mt-2">
       <CodeBlock
         :block="[
           {
@@ -125,7 +144,7 @@ onUnmounted(() => {
         ]"
       />
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>
@@ -134,5 +153,13 @@ onUnmounted(() => {
 }
 .link:hover::after {
   @apply scale-x-100;
+}
+
+#description {
+  @apply transition-all duration-300 opacity-0;
+}
+
+#description.active {
+  @apply opacity-100;
 }
 </style>
