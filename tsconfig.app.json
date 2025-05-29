@@ -22,7 +22,6 @@
 
     /* Paths */
     "baseUrl": ".",
-    "types": ["webpack-env"],
     "paths": {
       "@/*": ["src/*"]
     },

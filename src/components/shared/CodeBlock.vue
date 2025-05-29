@@ -4,7 +4,7 @@ export type Block = {
   description: string;
   link: string;
   section: string;
-  sublinks?: string[];
+  sublinks?: Line[];
 };
 
 type Line = {
