@@ -12,6 +12,12 @@
   body {
     @apply bg-neutral-900 text-white font-cascadia;
   }
+  h3 {
+    @apply sm:text-2xl text-xl mb-4
+  }
+  h4 {
+    @apply sm:text-xl text-lg mb-4
+  }
 }
 
 @layer components {

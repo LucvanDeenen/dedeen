@@ -2,7 +2,9 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import { ChevronDoubleRightIcon } from "@heroicons/vue/24/outline";
 
+import Content from "@/components/layout/Content.vue";
 import CodeBlock from "@/components/shared/CodeBlock.vue";
+
 import type { Block } from "@/components/shared/CodeBlock.vue";
 import sections from "@/assets/sections.json";
 import projects from "@/assets/projects.json";
@@ -72,7 +74,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
+  <Content
+    ref="welcome"
     class="w-[80%] max-w-[750px] mx-auto h-screen flex flex-col justify-center"
   >
     <!-- Title -->
@@ -140,7 +143,7 @@ onUnmounted(() => {
         </svg>
       </a>
     </div>
-  </div>
+  </Content>
 </template>
 
 <style scoped>

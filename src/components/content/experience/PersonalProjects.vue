@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import Timeline from '@/components/shared/Timeline.vue'
-import projects from '@/assets/projects.json';
+import Timeline from "@/components/shared/Timeline.vue";
+import Content from "@/components/layout/Content.vue";
+import projects from "@/assets/projects.json";
 </script>
 
 <template>
-  <Timeline id="projects" title="Personal Projects" :items="projects" />
+  <Content ref="projects">
+    <Timeline title="Personal Projects" :items="projects" />
+  </Content>
 </template>

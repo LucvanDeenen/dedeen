@@ -18,7 +18,7 @@ defineProps<{
     </div>
 
     <!-- Content -->
-    <div :class="{ 'px-4 sm:text-base text-sm': title }">
+    <div :class="{ 'px-6 sm:text-base text-sm': title }">
       <slot></slot>
     </div>
   </section>

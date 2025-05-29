@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import Timeline from "@/components/shared/Timeline.vue";
+import Content from "@/components/layout/Content.vue";
 import persona from "@/assets/persona.json";
-
-const workHistory = persona.experience;
 </script>
 
 <template>
-  <Timeline id="work" title="Work History" :items="workHistory" />
+  <Content ref="work">
+    <Timeline title="Work History" :items="persona.experience" />
+  </Content>
 </template>

@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import contactInfo from "@/assets/persona.json";
+import Content from "@/components/layout/Content.vue";
 </script>
 
 <template>
-  <div class="project-card">
+  <Content ref="contact" class="project-card">
     <div class="space-y-8">
       <div>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-          Let's Connect!
-        </h3>
-        <p class="text-gray-600 dark:text-gray-400">
+        <h3>Let's Connect!</h3>
+        <p class="text-gray-400">
           I'm always open to discussing new projects, creative ideas, or
           opportunities to be part of your visions.
         </p>
@@ -18,7 +17,7 @@ import contactInfo from "@/assets/persona.json";
       <div class="space-y-6">
         <div class="flex items-center gap-3">
           <svg
-            class="w-6 h-6 text-gray-600 dark:text-gray-400"
+            class="w-6 h-6 text-gray-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -32,7 +31,7 @@ import contactInfo from "@/assets/persona.json";
           </svg>
           <a
             :href="'mailto:' + contactInfo.email"
-            class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+            class="text-gray-400 hover:text-white transition-colors"
           >
             <b>Personal</b> {{ contactInfo.email }}
           </a>
@@ -55,7 +54,7 @@ import contactInfo from "@/assets/persona.json";
             </svg>
             <a
               :href="'mailto:' + contactInfo.workEmail"
-              class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+              class="text-gray-400 hover:text-white transition-colors"
             >
               <b>Work</b> {{ contactInfo.workEmail }}
             </a>
@@ -64,7 +63,7 @@ import contactInfo from "@/assets/persona.json";
 
         <div class="flex items-center gap-3">
           <svg
-            class="w-6 h-6 text-gray-600 dark:text-gray-400"
+            class="w-6 h-6 text-gray-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -82,11 +81,11 @@ import contactInfo from "@/assets/persona.json";
               d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
-          <span class="text-gray-600 dark:text-gray-400"
+          <span class="text-gray-400"
             ><b>ilionx</b>, {{ contactInfo.location }}</span
           >
         </div>
       </div>
     </div>
-  </div>
+  </Content>
 </template>
