@@ -19,7 +19,7 @@ defineProps<{
 </script>
 
 <template>
-  <section :id="id" class="mb-24">
+  <div :id="id" class="mb-24">
     <h3 class="text-2xl font-semibold mb-8 text-gray-800 dark:text-gray-200 tracking-wide">{{ title }}</h3>
     <div class="relative">
       <div class="absolute left-0 top-0 h-full w-0.5 bg-gray-200 dark:bg-gray-700"></div>
@@ -65,5 +65,5 @@ defineProps<{
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>

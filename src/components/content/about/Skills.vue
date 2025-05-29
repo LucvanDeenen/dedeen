@@ -40,7 +40,7 @@ const skillCategories: SkillCategory[] = [
 </script>
 
 <template>
-  <section>
+  <div>
     <h3 class="text-2xl font-semibold mb-8 text-gray-800 dark:text-gray-200">Technical Skills</h3>
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       <div v-for="category in skillCategories" 
@@ -64,5 +64,5 @@ const skillCategories: SkillCategory[] = [
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>

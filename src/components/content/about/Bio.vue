@@ -19,7 +19,7 @@ const bio = {
 </script>
 
 <template>
-  <section>
+  <div>
     <p class="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
       {{ bio.summary }}
     </p>
@@ -32,5 +32,5 @@ const bio = {
         </span>
       </div>
     </div>
-  </section>
+  </div>
 </template>

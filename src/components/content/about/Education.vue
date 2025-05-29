@@ -23,7 +23,7 @@ const education: Education[] = [
 </script>
 
 <template>
-  <section>
+  <div>
     <h3 class="text-2xl font-semibold mb-8 text-gray-800 dark:text-gray-200">Education</h3>
     <div class="space-y-6">
       <div v-for="edu in education" :key="edu.school">
@@ -42,5 +42,5 @@ const education: Education[] = [
         </ul>
       </div>
     </div>
-  </section>
+  </div>
 </template>
