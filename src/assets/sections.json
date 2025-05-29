@@ -1,0 +1,17 @@
+[
+  {
+    "section": "about-page",
+    "link": "aboutMe",
+    "description": "Skills and education"
+  },
+  {
+    "section": "experience-page",
+    "link": "myProjects",
+    "description": "Work and projects"
+  },
+  {
+    "section": "contact-page",
+    "link": "contact",
+    "description": "Info"
+  }
+]
