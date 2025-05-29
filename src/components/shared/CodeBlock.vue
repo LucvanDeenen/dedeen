@@ -4,14 +4,14 @@ export type Block = {
   description: string;
   link: string;
   section: string;
-  sublinks?: string[];
+  sublinks?: Line[];
 };
 
 type Line = {
   description: string;
   link: string;
   section: string;
-  index: number | null;
+  index?: number | null;
 };
 
 const props = defineProps<{
@@ -69,7 +69,7 @@ const lines = computed(() => {
             >{{ line.link }}
           </a>
           <span class="text-yellow-500">{{
-            line.index !== null && block[line.index].sublinks ? "() {" : "();"
+            line.index !== null && block[line.index!].sublinks ? "() {" : "();"
           }}</span>
           <span class="text-gray-500 comment sm:opacity-0" v-if="line.description">
             // {{ line.description }}

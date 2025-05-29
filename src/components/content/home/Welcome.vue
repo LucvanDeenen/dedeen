@@ -5,9 +5,8 @@ import { ChevronDoubleRightIcon } from "@heroicons/vue/24/outline";
 import Content from "@/components/layout/Content.vue";
 import CodeBlock from "@/components/shared/CodeBlock.vue";
 
-import type { Block } from "@/components/shared/CodeBlock.vue";
-import sections from "@/assets/sections.json";
 import projects from "@/assets/projects.json";
+import sections from "@/assets/sections.json";
 
 type Title = {
   domain: string;
@@ -17,7 +16,7 @@ type Title = {
 };
 
 const textArray: Array<Title> = projects;
-const block: Array<Block> = sections;
+const block = sections;
 
 const letters: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const currentDescription = ref("");
