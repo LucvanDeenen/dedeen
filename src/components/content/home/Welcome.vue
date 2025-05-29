@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 import { ChevronDoubleRightIcon } from "@heroicons/vue/24/outline";
-import CodeBlock from "../../shared/CodeBlock.vue";
+
+import CodeBlock from "@/components/shared/CodeBlock.vue";
+import type { Block } from "@/components/shared/CodeBlock.vue";
 
 type Title = {
   domain: string;
@@ -10,8 +12,23 @@ type Title = {
 };
 
 const letters: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-const textIndex = ref(0);
-const currentDescription = ref("");
+const block: Array<Block> = [
+  {
+    section: "about",
+    link: "aboutMe",
+    description: "About me as a developer",
+  },
+  {
+    section: "experience",
+    link: "myProjects",
+    description: "My work and projects",
+  },
+  {
+    section: "contact",
+    link: "contact",
+    description: "My information to reach out to me",
+  },
+];
 const textArray: Array<Title> = [
   {
     domain: "dedeen",
@@ -23,11 +40,18 @@ const textArray: Array<Title> = [
     tld: "app",
     description: "A web application for party games!",
   },
+  {
+    domain: "cooking-d8911.web",
+    tld: "app",
+    description: "A chef's cooking tool!",
+  },
 ];
+
+const currentDescription = ref("");
+const textIndex = ref(0);
 
 let interval: ReturnType<typeof setInterval> | null = null;
 let animation: ReturnType<typeof setInterval> | null = null;
-
 const animateText = (title: HTMLElement, description: HTMLElement) => {
   if (!title || !description) return;
 
@@ -124,25 +148,7 @@ onUnmounted(() => {
 
     <!-- Links -->
     <div class="w-full mt-2">
-      <CodeBlock
-        :block="[
-          {
-            section: 'about',
-            link: 'aboutMe',
-            description: 'About me as a developer',
-          },
-          {
-            section: 'experience',
-            link: 'myProjects',
-            description: 'My work and projects',
-          },
-          {
-            section: 'contact',
-            link: 'contact',
-            description: 'My information to reach out to me',
-          },
-        ]"
-      />
+      <CodeBlock :block="block" />
     </div>
   </div>
 </template>
@@ -154,11 +160,9 @@ onUnmounted(() => {
 .link:hover::after {
   @apply scale-x-100;
 }
-
 #description {
   @apply transition-all duration-500 opacity-0;
 }
-
 #description.active {
   @apply opacity-100;
 }

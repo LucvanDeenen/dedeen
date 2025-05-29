@@ -1,26 +1,15 @@
 <script setup lang="ts">
-import { ref, provide } from "vue";
-import HomePage from "./components/pages/HomePage.vue";
-import ExperiencePage from "./components/pages/ExperiencePage.vue";
-import AboutPage from "./components/pages/AboutPage.vue";
-import ContactPage from "./components/pages/ContactPage.vue";
+import { ref, provide, watch, nextTick } from "vue";
+import ExperiencePage from "@/pages/ExperiencePage.vue";
+import ContactPage from "@/pages/ContactPage.vue";
+import AboutPage from "@/pages/AboutPage.vue";
+import HomePage from "@/pages/HomePage.vue";
 
 const activeSection = ref("home");
 const updateSection = (sectionId: string) => {
   activeSection.value = sectionId;
-  if (sectionId === "home") {
-    isNavOpen.value = false;
-  }
 };
 
-const isNavOpen = ref(false);
-const toggleNav = () => {
-  isNavOpen.value = !isNavOpen.value;
-};
-
-provide("app", { updateSection, toggleNav });
-
-import { watch, nextTick } from "vue";
 watch(activeSection, async (newSection) => {
   await nextTick();
   let el: HTMLElement | null = null;
@@ -42,34 +31,15 @@ watch(activeSection, async (newSection) => {
     el.scrollIntoView({ behavior: "smooth" });
   }
 });
+provide("app", { updateSection });
 </script>
 
 <template>
-  <div>
-    <!-- Navigation with transitions -->
-    <!-- <div
-      class="fixed left-0 top-0 h-[100dvh] lg:w-[30%] z-[51] transition-transform duration-500"
-      :class="[
-        isNavOpen ? '-translate-x-full' : 'lg:translate-x-0',
-        { '-translate-x-full': isNavOpen },
-      ]"
-    >
-      <Navigation @close="toggleNav" />
-    </div> -->
-
-    <!-- Overlay for nav-->
-    <div
-      v-if="isNavOpen"
-      class="fixed inset-0 bg-black bg-opacity-50 z-50"
-      @click="toggleNav"
-    ></div>
-
-    <!-- Main Content -->
-    <div class="overflow-x-hidden">
-      <HomePage id="home-page" />
-      <AboutPage id="about-page" />
-      <ExperiencePage id="experience-page" />
-      <ContactPage id="contact-page" />
-    </div>
+  <!-- Main Content -->
+  <div class="overflow-x-hidden">
+    <HomePage id="home-page" />
+    <AboutPage id="about-page" />
+    <ExperiencePage id="experience-page" />
+    <ContactPage id="contact-page" />
   </div>
 </template>

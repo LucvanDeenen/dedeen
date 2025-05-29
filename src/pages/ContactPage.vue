@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Page from "../layout/Page.vue";
-import Contact from "../content/contact/Contact.vue";
+import Page from "@/components/layout/Page.vue";
+import Contact from "@/components/content/contact/Contact.vue";
 </script>
 
 <template>

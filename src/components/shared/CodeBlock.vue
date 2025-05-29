@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { inject } from "vue";
-export type CodeBlock = {
+export type Block = {
   description: string;
   link: string;
   section: string;
@@ -8,13 +8,13 @@ export type CodeBlock = {
 
 const app: any = inject("app");
 defineProps<{
-  block: CodeBlock[];
+  block: Block[];
 }>();
 </script>
 
 <template>
   <div class="rounded bg-neutral-800 min-w-[300px] px-2 py-2 my-2">
-    <div v-for="(line, index) in block">
+    <div v-for="(line, index) in block" class="code-block">
       <p>
         <span class="text-slate-600 px-2 mr-2">{{ index + 1 }}</span>
         <a
@@ -23,7 +23,9 @@ defineProps<{
           >{{ line.link }}
         </a>
         <span class="text-yellow-500">()</span>
-        <span class="text-gray-500"> // {{ line.description }} </span>
+        <span class="text-gray-500 comment sm:opacity-0">
+          // {{ line.description }}
+        </span>
       </p>
     </div>
   </div>
@@ -35,5 +37,14 @@ defineProps<{
 }
 .link:hover::after {
   @apply scale-x-100;
+}
+.code-block:hover {
+  @apply active;
+}
+.comment {
+  @apply transition-opacity duration-150;
+}
+.active .comment {
+  @apply opacity-100;
 }
 </style>

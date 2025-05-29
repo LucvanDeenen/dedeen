@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Timeline from '../../shared/Timeline.vue'
+import Timeline from '@/components/shared/Timeline.vue'
 
 const projects = [
   {
