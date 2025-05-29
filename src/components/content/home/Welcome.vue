@@ -78,7 +78,7 @@ onUnmounted(() => {
     <div class="w-full text-start py-2 flex justify-between">
       <a
         class="flex min-w-[200px]"
-        target="_blank"
+        :target="textArray[textIndex].domain !== 'dedeen' ? '_blank' : '_self'"
         :href="`https://${textArray[textIndex].domain}.${textArray[textIndex].tld}`"
       >
         <ChevronDoubleRightIcon class="w-10 h-10 mr-1 text-yellow-500" />
@@ -156,7 +156,7 @@ onUnmounted(() => {
 }
 
 #description {
-  @apply transition-all duration-300 opacity-0;
+  @apply transition-all duration-500 opacity-0;
 }
 
 #description.active {
