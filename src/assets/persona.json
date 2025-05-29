@@ -1,0 +1,88 @@
+{
+  "email": "lucvd@hotmail.nl",
+  "workEmail": "lvandeenen@ilionx.com",
+  "location": "Maastricht (NL)",
+  "summary": "I’m a dedicated software engineer who enjoys tackling complex problems and integrating new technologies to build meaningful solutions. I have extensive experience in enterprise software development and excel at working with and improving existing codebases while consistently delivering quality results.",
+  "interests": [
+    "Automation",
+    "Machine Learning",
+    "Java Development",
+    "Frontend",
+    "Game Development",
+    "3D Modelling",
+    "DevTools"
+  ],
+  "education": [
+    {
+      "school": "ZUYD University of Applied Sciences",
+      "degree": "Bachelor of Science",
+      "period": "2017 - 2021",
+      "description": "Specialized in Software Development with a focus on solution-driven design, research-based decision-making, and process-centered methodologies.",
+      "achievements": [
+        "Developed a POC Mobile App for the bycicle event \"Limburgs Mooiste\".",
+        "Programmed a Language Processor that uses a dataset of books to guess the language the user is prompting it.",
+        "Created the game TicTacToe where the user can play against an AI, based on the MiniMax algorithms"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "skills": [
+        { "name": "Vue.js", "level": 4 },
+        { "name": "TypeScript", "level": 3 },
+        { "name": "Angular", "level": 2 },
+        { "name": "React", "level": 2 }
+      ]
+    },
+    {
+      "name": "Backend",
+      "skills": [
+        { "name": "Java", "level": 5 },
+        { "name": "Spring", "level": 4 },
+        { "name": "Kotlin", "level": 3 },
+        { "name": ".NET", "level": 2 },
+        { "name": "C#", "level": 3 }
+      ]
+    },
+    {
+      "name": "DevOps",
+      "skills": [
+        { "name": "Docker", "level": 5 },
+        { "name": "CI/CD", "level": 4 },
+        { "name": "AWS", "level": 3 },
+        { "name": "Kubernetes", "level": 3 }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "ilionx Group B.V.",
+      "subtitle": "Software Engineer / Software Consultant",
+      "period": "2022 - Present",
+      "description": [
+        "I am currently working as a consultant for VodafoneZiggo’s NaaS unit, where I started as a member of the development team and progressed to lead developer, overseeing team operations and project delivery. My daily responsibilities include process automation, system integration, and contributing to the development of innovative enterprise solutions.",
+        "Enhanced the functionality of 'Partner in Balans', a healthcare application, by implementing significant improvements across both the frontend and backend systems."
+      ],
+      "technologies": [
+        "Spring",
+        "Java",
+        "Kotlin",
+        "Typescript",
+        "Angular",
+        "Jenkins",
+        "AWS"
+      ]
+    },
+    {
+      "title": "LUC B.V.",
+      "subtitle": "Software Engineer",
+      "period": "2021 - 2022",
+      "description": [
+        "Contributed to the development and optimization of an in-house fat client application to streamline and enhance the production workflow.",
+        "Led the development of a new system architecture to revamp and modernize the fat client application."
+      ],
+      "technologies": [".NET", "Vue.JS", "VB.NET"]
+    }
+  ]
+}

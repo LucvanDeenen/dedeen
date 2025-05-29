@@ -1,7 +1,8 @@
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/500.css';
-@import '@fontsource/inter/600.css';
-@import '@fontsource/inter/700.css';
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import url("https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,20 +10,26 @@
 
 @layer base {
   body {
-    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-inter;
+    @apply bg-neutral-900 text-white font-cascadia;
+  }
+  h3 {
+    @apply sm:text-2xl text-xl mb-4
+  }
+  h4 {
+    @apply sm:text-xl text-lg mb-4
   }
 }
 
 @layer components {
   .section-title {
-    @apply text-4xl font-bold text-gray-900 dark:text-white capitalize tracking-wide;
+    @apply text-4xl font-bold text-white capitalize tracking-wide;
   }
   .project-card {
-    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700;
+    @apply rounded-lg shadow-md p-8 hover:shadow-xl transition-all duration-300 border;
   }
   .nav-link {
-    @apply block px-4 py-2 text-gray-600 dark:text-gray-400 transition-all duration-200 
-           relative hover:text-black dark:hover:text-white capitalize tracking-wide text-sm font-medium;
+    @apply block px-4 py-2 text-gray-600 transition-all duration-200 
+           relative hover:text-black capitalize tracking-wide text-sm font-medium;
   }
   .nav-link::after {
     @apply content-[''] absolute bottom-0 left-4 right-4 h-0.5 bg-current scale-x-0 transition-transform duration-200 origin-left;
@@ -31,7 +38,7 @@
     @apply scale-x-100;
   }
   .nav-link.active {
-    @apply text-black dark:text-white;
+    @apply text-black;
   }
   .nav-link.active::after {
     @apply scale-x-100;
@@ -40,10 +47,21 @@
 
 /* Hide all scrollbars */
 * {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-color: var(--scrollbar-thumb, #888) transparent;
+  scrollbar-width: thin;
 }
 
+/* For Webkit browsers */
 *::-webkit-scrollbar {
-  display: none;
+  width: 8px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+html {
+  scroll-behavior: smooth;
 }

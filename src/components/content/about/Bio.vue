@@ -1,0 +1,22 @@
+<script setup lang="ts">
+import Content from "@/components/layout/Content.vue";
+import persona from "@/assets/persona.json";
+</script>
+
+<template>
+  <Content idRef="bio">
+    <p class="mb-3 leading-relaxed">
+      {{ persona.summary }}
+    </p>
+    <h4>Areas of Interest</h4>
+    <div class="flex flex-wrap gap-3">
+      <span
+        v-for="interest in persona.interests"
+        :key="interest"
+        class="px-4 py-2 bg-gray-700 rounded-full text-sm"
+      >
+        {{ interest }}
+      </span>
+    </div>
+  </Content>
+</template>
