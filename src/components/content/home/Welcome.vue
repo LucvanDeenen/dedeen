@@ -16,17 +16,17 @@ const block: Array<Block> = [
   {
     section: "about",
     link: "aboutMe",
-    description: "About me as a developer",
+    description: "Skills and education",
   },
   {
     section: "experience",
     link: "myProjects",
-    description: "My work and projects",
+    description: "Work and projects",
   },
   {
     section: "contact",
     link: "contact",
-    description: "My information to reach out to me",
+    description: "Info",
   },
 ];
 const textArray: Array<Title> = [
@@ -38,12 +38,12 @@ const textArray: Array<Title> = [
   {
     domain: "sjoelen-39112.web",
     tld: "app",
-    description: "A web application for party games!",
+    description: "Party games tool!",
   },
   {
     domain: "cooking-d8911.web",
     tld: "app",
-    description: "A chef's cooking tool!",
+    description: "Ingredients and meals",
   },
 ];
 
@@ -110,7 +110,9 @@ onUnmounted(() => {
       :target="textArray[textIndex].domain !== 'dedeen' ? '_blank' : '_self'"
       :href="`https://${textArray[textIndex].domain}.${textArray[textIndex].tld}`"
     >
-      <ChevronDoubleRightIcon class="sm:w-10 sm:h-10 w-7 h-7 mr-1 text-yellow-500" />
+      <ChevronDoubleRightIcon
+        class="sm:w-10 sm:h-10 w-6 h-6 mr-1 text-yellow-500"
+      />
       <h1
         class="sm:text-4xl text-xl text-slate-100 font-bold uppercase bg-clip-text relative"
       >
@@ -121,12 +123,13 @@ onUnmounted(() => {
     </a>
 
     <!-- Description -->
-    <div id="description" class="mx-2">
-      <p class="text-gray-500 sm:text-lg text-sm">"{{ currentDescription }}"</p>
-    </div>
+    <p class="text-gray-500 ml-1 sm:text-base text-xs">
+      // My project
+      <span id="description"> > {{ currentDescription }} </span>
+    </p>
 
     <!-- Links -->
-    <div class="w-full mt-2 sm:text-base text-sm">
+    <div class="w-full mt-2 sm:text-base text-xs">
       <CodeBlock :block="block" />
     </div>
 
