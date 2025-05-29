@@ -26,29 +26,14 @@ onMounted(() => {
   sections.forEach((section) => observer.observe(section));
 });
 
-watch(targetSection, async (newSection) => {
-  if (!newSection) return;
-
+watch(targetSection, async (target) => {
+  if (!target) return;
   await nextTick();
-  let el: HTMLElement | null = null;
 
-  switch (newSection) {
-    case "home-page":
-      el = document.querySelector("#home-page");
-      break;
-    case "about-page":
-      el = document.querySelector("#about-page");
-      break;
-    case "experience-page":
-      el = document.querySelector("#experience-page");
-      break;
-    case "contact-page":
-      el = document.querySelector("#contact-page");
-      break;
-  }
+  let el: HTMLElement | null = document.querySelector(`#${target}`);
   if (el) {
     el.scrollIntoView({ behavior: "smooth" });
-    activeSection.value = newSection;
+    activeSection.value = target;
     targetSection.value = null;
   }
 });
