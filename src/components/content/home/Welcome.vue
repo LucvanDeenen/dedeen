@@ -45,7 +45,7 @@ const animateText = (title: HTMLElement, description: HTMLElement) => {
     if (iteration > textArray[textIndex.value].domain.length) {
       clearInterval(animation!);
       description.classList.add("active");
-      currentDescription.value = textArray[textIndex.value].description
+      currentDescription.value = textArray[textIndex.value].description;
     }
 
     iteration += 1 / 3;
