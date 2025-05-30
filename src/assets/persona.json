@@ -30,7 +30,7 @@
       "name": "Frontend",
       "skills": [
         { "name": "Vue.js", "level": 4 },
-        { "name": "Tailwind", "level": 4 },
+        { "name": "Tailwind", "level": 2 },
         { "name": "TypeScript", "level": 3 },
         { "name": "Angular", "level": 2 },
         { "name": "React", "level": 2 }
@@ -42,7 +42,7 @@
         { "name": "Java", "level": 5 },
         { "name": "Spring", "level": 4 },
         { "name": "Kotlin", "level": 3 },
-        { "name": "VB.NET", "level": 2 },
+        { "name": "Visual Basic", "level": 2 },
         { "name": ".NET", "level": 2 },
         { "name": "Python", "level": 2 },
         { "name": "Node.js", "level": 3 },
