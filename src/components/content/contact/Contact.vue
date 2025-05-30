@@ -10,7 +10,7 @@ import Content from "@/components/layout/Content.vue";
         <h3>Let's Connect!</h3>
         <p class="text-gray-400">
           I'm always open to discussing new projects, creative ideas, or
-          opportunities to be part of your visions.
+          opportunities to be part of your vision.
         </p>
       </div>
 

@@ -22,14 +22,14 @@
     "description": "",
     "sublinks": [
       {
-        "section": "projects",
-        "link": "projects",
-        "description": "Hobby projects"
-      },
-      {
         "section": "work",
         "link": "work",
         "description": "What I do"
+      },
+      {
+        "section": "projects",
+        "link": "projects",
+        "description": "Hobby projects"
       }
     ]
   },

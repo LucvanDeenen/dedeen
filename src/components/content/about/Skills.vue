@@ -6,11 +6,15 @@ import persona from "@/assets/persona.json";
 <template>
   <Content idRef="skills">
     <h3 class="text-gray-500">// Technical Skills</h3>
+    <p class="mb-3 leading-relaxed">
+      Each skill is rated on a scale from 1 to 5, indicating proficiency and
+      confidence with the respective language or technology.
+    </p>
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       <div
         v-for="category in persona.skills"
         :key="category.name"
-        class="project-card"
+        class="project-card bg-neutral-800"
       >
         <h4>
           {{ category.name }}
@@ -25,9 +29,9 @@ import persona from "@/assets/persona.json";
               <span class="text-gray-300">{{ skill.name }}</span>
               <span class="text-gray-400">{{ skill.level }}/5</span>
             </div>
-            <div class="h-2 bg-gray-700 rounded-full overflow-hidden">
+            <div class="h-2 bg-gray-600 rounded-full overflow-hidden">
               <div
-                class="h-full bg-white rounded-full transition-all duration-300"
+                class="h-full bg-yellow-500 rounded-full transition-all duration-300"
                 :style="{ width: `${(skill.level / 5) * 100}%` }"
               ></div>
             </div>
