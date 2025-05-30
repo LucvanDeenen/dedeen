@@ -14,8 +14,8 @@ import persona from "@/assets/persona.json";
               {{ edu.school }}
             </h4>
             <p>{{ edu.degree }}</p>
+	          <p>{{ edu.period }}</p>
           </div>
-          <span>{{ edu.period }}</span>
         </div>
         <p class="mb-4">
           {{ edu.description }}
