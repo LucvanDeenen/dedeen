@@ -8,7 +8,7 @@ import HomePage from "@/pages/HomePage.vue";
 import { ChevronDoubleUpIcon } from "@heroicons/vue/24/solid";
 
 const activeSection = ref("home-page");
-const targetSection = ref(null);
+const targetSection = ref();
 const updateSection = (sectionId: string) => {
   targetSection.value = sectionId;
 };
