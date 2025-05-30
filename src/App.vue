@@ -5,7 +5,7 @@ import ContactPage from "@/pages/ContactPage.vue";
 import AboutPage from "@/pages/AboutPage.vue";
 import HomePage from "@/pages/HomePage.vue";
 
-import { ChevronUpIcon } from '@heroicons/vue/24/solid'
+import { ChevronDoubleUpIcon } from "@heroicons/vue/24/solid";
 
 const activeSection = ref("home-page");
 const targetSection = ref(null);
@@ -23,7 +23,7 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0.3 }
+    { threshold: 0.5 }
   );
   sections.forEach((section) => observer.observe(section));
 });
@@ -34,7 +34,9 @@ watch(targetSection, async (target) => {
 
   let el: HTMLElement | null = document.querySelector(`#${target}`);
   if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
+    const offset = window.innerHeight / 8;
+    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: "smooth" });
     activeSection.value = target;
     targetSection.value = null;
   }
@@ -44,24 +46,20 @@ provide("app", { updateSection });
 
 <template>
   <div class="overflow-x-hidden">
-		<!-- Move this into a separate component -->
-		<div class="sm:top-right bottom-right transition-all opacity-0" :class="{'opacity-100': activeSection !== 'home-page'}">
-			<button class="w-10 h-10 rounded-full bg-yellow-500 hover:bg-yellow-300 flex items-center justify-center">
-		    <ChevronUpIcon class="w-5 h-5 text-gray-500" />
-			</button>
-		</div>
-    <HomePage id="home-page" />
+    <div
+      class="fixed bottom-5 right-5 z-50 transition-all opacity-0"
+      :class="{ 'opacity-100': activeSection !== 'home-page' }"
+      @click="updateSection('home-page')"
+    >
+      <button
+        class="w-10 h-10 rounded-full bg-gray-500 flex items-center justify-center"
+      >
+        <ChevronDoubleUpIcon class="w-5 h-5 hover:text-yellow-500" />
+      </button>
+    </div>
+    <HomePage id="home-page" class="mb-12" />
     <AboutPage id="about-page" />
     <ExperiencePage id="experience-page" />
     <ContactPage id="contact-page" />
   </div>
 </template>
-
-<style scoped>
-.top-right {
-	@apply fixed top-0 right-0
-}
-.bottom-right {
-	@apply fixed bottom-0 right-0
-}
-</style>
