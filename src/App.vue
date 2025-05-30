@@ -52,7 +52,7 @@ provide("app", { updateSection });
       @click="updateSection('home-page')"
     >
       <button
-        class="w-10 h-10 rounded-full bg-neutral-700 flex items-center justify-center"
+        class="w-10 h-10 rounded-full border-white bg-neutral-700 flex items-center justify-center"
       >
         <ChevronDoubleUpIcon class="w-5 h-5 hover:text-yellow-500" />
       </button>
