@@ -14,6 +14,24 @@
     "technologies": ["Vue 3", "TypeScript", "Tailwind CSS", "Github Actions"]
   },
   {
+    "domain": "auth-app-9o2.pages",
+    "href": null,
+    "tld": "dev",
+    "summary": "Auth portal",
+    "title": "Authentication portal",
+    "subtitle": "A portal that allows me to integrate user management for my hobby projects",
+    "links": {
+      "github": "https://github.com/LucvanDeenen/auth-portal",
+      "demo": "https://auth-app-9o2.pages.dev/"
+    },
+    "description": [
+      "An authentication portal designed to integrate user management for hobby projects.",
+      "Features a simple and secure login system.",
+      "Built with modern web technologies for easy integration."
+    ],
+    "technologies": ["Vue 3", "TypeScript", "Tailwind CSS", "Github Actions", "Cloudflare"]
+  },
+  {
     "domain": "sjoelen-39112.web",
     "href": null,
     "tld": "app",
