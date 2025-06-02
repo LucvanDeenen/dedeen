@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <div :class="{ 'mb-12': !override }" :ref="idRef" :id="idRef">
+  <div :class="{ 'mb-12': !override }" :ref="id-ref" :id="idRef">
     <slot></slot>
   </div>
 </template>

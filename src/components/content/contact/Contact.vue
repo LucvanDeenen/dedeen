@@ -4,7 +4,7 @@ import Content from "@/components/layout/Content.vue";
 </script>
 
 <template>
-  <Content idRef="contact" class="project-card">
+  <Content id-ref="contact" class="project-card">
     <div class="space-y-8">
       <div>
         <h3>Let's Connect!</h3>

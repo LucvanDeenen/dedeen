@@ -4,7 +4,7 @@ import persona from "@/assets/persona.json";
 </script>
 
 <template>
-  <Content idRef="skills">
+  <Content id-ref="skills">
     <h3 class="text-gray-500">// Technical Skills</h3>
     <p class="mb-3 leading-relaxed">
       Each skill is rated on a scale from 1 to 5, indicating proficiency and

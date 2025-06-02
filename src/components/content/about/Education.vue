@@ -4,7 +4,7 @@ import persona from "@/assets/persona.json";
 </script>
 
 <template>
-  <Content idRef="education" class="mb-12">
+  <Content id-ref="education" class="mb-12">
     <h3 class="text-gray-500">// Education</h3>
     <div class="space-y-6">
       <div v-for="edu in persona.education" :key="edu.school">

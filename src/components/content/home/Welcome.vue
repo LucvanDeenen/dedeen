@@ -74,7 +74,7 @@ onUnmounted(() => {
 
 <template>
   <Content
-    idRef="welcome"
+    id-ref="welcome"
     class="w-[80%] max-w-[750px] mx-auto h-screen flex flex-col justify-center"
   >
     <!-- Title -->

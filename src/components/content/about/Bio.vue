@@ -4,7 +4,7 @@ import persona from "@/assets/persona.json";
 </script>
 
 <template>
-  <Content idRef="bio">
+  <Content id-ref="bio">
     <p class="mb-3 leading-relaxed">
       {{ persona.summary }}
     </p>
