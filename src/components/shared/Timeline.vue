@@ -30,7 +30,7 @@ defineProps<{
           ></div>
 
           <div
-            class="project-card transform transition-all duration-300 hover:scale-[1.02]"
+            class="project-card"
           >
             <div class="flex justify-between items-start mb-4">
               <div>
@@ -75,7 +75,7 @@ defineProps<{
               <span
                 v-for="tech in item.technologies"
                 :key="tech"
-                class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm"
+                class="chip"
               >
                 {{ tech }}
               </span>

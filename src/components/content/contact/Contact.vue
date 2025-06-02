@@ -33,7 +33,7 @@ import Content from "@/components/layout/Content.vue";
             :href="'mailto:' + contactInfo.email"
             class="text-gray-400 hover:text-white transition-colors"
           >
-            <b>Personal</b> {{ contactInfo.email }}
+            <b class="text-yellow-500">Personal</b> {{ contactInfo.email }}
           </a>
         </div>
 
@@ -56,7 +56,7 @@ import Content from "@/components/layout/Content.vue";
               :href="'mailto:' + contactInfo.workEmail"
               class="text-gray-400 hover:text-white transition-colors"
             >
-              <b>Work</b> {{ contactInfo.workEmail }}
+              <b class="text-yellow-500">Work</b> {{ contactInfo.workEmail }}
             </a>
           </div>
         </div>
@@ -81,8 +81,9 @@ import Content from "@/components/layout/Content.vue";
               d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
-          <span class="text-gray-400"
-            ><b>ilionx</b>, {{ contactInfo.location }}</span
+          <span class="text-gray-400 cursor-default"
+            ><b class="text-yellow-500">ilionx</b>,
+            {{ contactInfo.location }}</span
           >
         </div>
       </div>

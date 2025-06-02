@@ -13,7 +13,7 @@ import persona from "@/assets/persona.json";
       <span
         v-for="interest in persona.interests"
         :key="interest"
-        class="px-4 py-2 bg-gray-700 rounded-full text-sm"
+        class="chip"
       >
         {{ interest }}
       </span>

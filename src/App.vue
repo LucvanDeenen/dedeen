@@ -18,6 +18,7 @@ onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        console.log(entry.target.id, entry.isIntersecting);
         if (entry.isIntersecting) {
           activeSection.value = entry.target.id;
         }
@@ -51,9 +52,7 @@ provide("app", { updateSection });
       :class="{ 'opacity-100': activeSection !== 'home-page' }"
       @click="updateSection('home-page')"
     >
-      <button
-        class="w-10 h-10 rounded-full border-white bg-neutral-700 flex items-center justify-center"
-      >
+      <button class="button-icon">
         <ChevronDoubleUpIcon class="w-5 h-5 hover:text-yellow-500" />
       </button>
     </div>
