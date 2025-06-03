@@ -4,6 +4,8 @@
 @import "@fontsource/inter/700.css";
 @import url("https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap");
 
+@import "style/typography.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,10 +18,10 @@
     @apply sm:px-8;
   }
   h3 {
-    @apply sm:text-2xl text-xl mb-4
+    @apply sm:text-2xl text-xl mb-4;
   }
   h4 {
-    @apply sm:text-xl text-lg mb-4
+    @apply sm:text-xl text-lg mb-4;
   }
 }
 
