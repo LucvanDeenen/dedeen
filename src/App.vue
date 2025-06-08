@@ -18,7 +18,6 @@ onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        console.log(entry.target.id, entry.isIntersecting);
         if (entry.isIntersecting) {
           activeSection.value = entry.target.id;
         }
