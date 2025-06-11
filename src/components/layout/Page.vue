@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ChevronDoubleRightIcon } from "@heroicons/vue/24/outline";
+
 defineProps<{
   title?: string;
 }>();

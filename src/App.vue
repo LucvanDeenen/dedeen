@@ -9,21 +9,27 @@ import { ChevronDoubleUpIcon } from "@heroicons/vue/24/solid";
 
 const activeSection = ref("home-page");
 const targetSection = ref();
+const loadedSections = ref<Record<string, boolean>>({});
 const updateSection = (sectionId: string) => {
   targetSection.value = sectionId;
 };
 
 onMounted(() => {
   const sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    loadedSections.value[section.id] = false;
+  });
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           activeSection.value = entry.target.id;
+          loadedSections.value[entry.target.id] = true;
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.1 }
   );
   sections.forEach((section) => observer.observe(section));
 });
@@ -51,13 +57,37 @@ provide("app", { updateSection });
       :class="{ 'opacity-100': activeSection !== 'home-page' }"
       @click="updateSection('home-page')"
     >
-      <button class="button-icon">
-        <ChevronDoubleUpIcon class="w-5 h-5 hover:text-yellow-500" />
+      <button class="button-icon hover:border-yellow-500 hover:text-yellow-500">
+        <ChevronDoubleUpIcon class="w-5 h-5" />
       </button>
     </div>
     <HomePage id="home-page" class="mb-12" />
-    <AboutPage id="about-page" />
-    <ExperiencePage id="experience-page" />
-    <ContactPage id="contact-page" />
+    <AboutPage
+      id="about-page"
+      class="transition-all duration-700 ease-in-out"
+      :class="
+        loadedSections['about-page']
+          ? 'opacity-100 translate-x-0'
+          : 'opacity-0 -translate-x-10'
+      "
+    />
+    <ExperiencePage
+      id="experience-page"
+      class="transition-all duration-700 ease-in-out"
+      :class="
+        loadedSections['experience-page']
+          ? 'opacity-100 translate-x-0'
+          : 'opacity-0 translate-x-10'
+      "
+    />
+    <ContactPage
+      id="contact-page"
+      class="transition-all duration-700 ease-in-out"
+      :class="
+        loadedSections['contact-page']
+          ? 'opacity-100 translate-x-0'
+          : 'opacity-0 -translate-x-10'
+      "
+    />
   </div>
 </template>

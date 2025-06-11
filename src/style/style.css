@@ -4,7 +4,7 @@
 @import "@fontsource/inter/700.css";
 @import url("https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap");
 
-@import "style/typography.css";
+@import "./typography.css";
 
 @tailwind base;
 @tailwind components;
@@ -76,3 +76,11 @@
 html {
   scroll-behavior: smooth;
 }
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-snap-center {
+  scroll-snap-align: center;
+}
+

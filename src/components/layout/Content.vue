@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import { ref, defineExpose } from "vue";
+const contentEl = ref<HTMLDivElement | null>(null);
+defineExpose({
+  contentEl,
+});
+
 defineProps<{
   override?: {
     type: boolean;
@@ -9,7 +15,7 @@ defineProps<{
 </script>
 
 <template>
-  <div :class="{ 'mb-12': !override }" :ref="idRef" :id="idRef">
+  <div :class="{ 'mb-12': !override }" ref="contentEl" :id="idRef">
     <slot></slot>
   </div>
 </template>
