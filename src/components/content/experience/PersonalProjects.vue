@@ -78,11 +78,6 @@ const onScroll = () => {
             'border-animate border-animate-active': index === targetCard,
             'border-animate': index !== targetCard,
           }"
-          :style="
-            project.image
-              ? `background-image: url(/images/${project.image})`
-              : ''
-          "
           v-for="(project, index) in projects"
           :key="index"
         >
