@@ -6,6 +6,10 @@
     "summary": "You are here!",
     "title": "Portfolio Website",
     "subtitle": "Personal Website - Dedeen.nl",
+    "links": {
+      "github": "https://github.com/LucvanDeenen/dedeen",
+      "demo": "https://dedeen.nl/"
+    },
     "description": [
       "A responsive portfolio website built with Vue 3 and Tailwind CSS.",
       "Setup automatic deployment with Github Actions and Firebase hosting.",
@@ -18,7 +22,7 @@
     "href": null,
     "tld": "dev",
     "summary": "Auth portal",
-    "title": "Authentication portal",
+    "title": "Auth portal",
     "subtitle": "A portal that allows me to integrate user management for my hobby projects",
     "links": {
       "github": "https://github.com/LucvanDeenen/auth-portal",
@@ -29,7 +33,13 @@
       "Features a simple and secure login system.",
       "Built with modern web technologies for easy integration."
     ],
-    "technologies": ["Vue 3", "TypeScript", "Tailwind CSS", "Github Actions", "Cloudflare"]
+    "technologies": [
+      "Vue 3",
+      "TypeScript",
+      "Tailwind CSS",
+      "Github Actions",
+      "Cloudflare"
+    ]
   },
   {
     "domain": "sjoelen-39112.web",

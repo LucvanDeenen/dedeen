@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, provide, watch, nextTick, onMounted } from "vue";
 import ExperiencePage from "@/pages/ExperiencePage.vue";
+import ProjectPage from "@/pages/ProjectPage.vue";
 import ContactPage from "@/pages/ContactPage.vue";
 import AboutPage from "@/pages/AboutPage.vue";
 import HomePage from "@/pages/HomePage.vue";
@@ -29,7 +30,7 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.05 }
   );
   sections.forEach((section) => observer.observe(section));
 });
@@ -69,6 +70,15 @@ provide("app", { updateSection });
         loadedSections['about-page']
           ? 'opacity-100 translate-x-0'
           : 'opacity-0 -translate-x-10'
+      "
+    />
+    <ProjectPage
+      id="project-page"
+      class="transition-all duration-700 ease-in-out"
+      :class="
+        loadedSections['project-page']
+          ? 'opacity-100 translate-x-0'
+          : 'opacity-0 translate-x-10'
       "
     />
     <ExperiencePage

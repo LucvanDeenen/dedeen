@@ -17,21 +17,14 @@
     ]
   },
   {
+    "section": "project-page",
+    "link": "project",
+    "description": "My hobby apps"
+  },
+  {
     "section": "experience-page",
-    "link": "experience",
-    "description": "",
-    "sublinks": [
-      {
-        "section": "work",
-        "link": "work",
-        "description": "What I do"
-      },
-      {
-        "section": "projects",
-        "link": "projects",
-        "description": "Hobby projects"
-      }
-    ]
+    "link": "work",
+    "description": "What I do"
   },
   {
     "section": "contact-page",

@@ -44,13 +44,13 @@ const lines = computed(() => {
         section: "",
         index: null
       });
-    }
       lineCollection.push({
         description: "",
         link: "",
         section: "",
         index: null
       });
+    }
   });
   return lineCollection;
 });
