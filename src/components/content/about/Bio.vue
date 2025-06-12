@@ -10,11 +10,7 @@ import persona from "@/assets/persona.json";
     </p>
     <h4>Areas of Interest</h4>
     <div class="flex flex-wrap gap-3">
-      <span
-        v-for="interest in persona.interests"
-        :key="interest"
-        class="chip"
-      >
+      <span v-for="interest in persona.interests" :key="interest" class="chip">
         {{ interest }}
       </span>
     </div>

@@ -4,7 +4,7 @@ import Welcome from "@/components/content/home/Welcome.vue";
 </script>
 
 <template>
-  <Page>
+  <Page class="min-h-screen">
     <Welcome />
   </Page>
 </template>

@@ -12,14 +12,12 @@ interface TimelineItem {
 }
 
 defineProps<{
-  title: string;
   items: TimelineItem[];
 }>();
 </script>
 
 <template>
   <div>
-    <h3 class="text-gray-500">// {{ title }}</h3>
     <div class="relative">
       <div class="absolute left-0 top-0 h-full w-0.5 bg-gray-700"></div>
 
@@ -29,9 +27,7 @@ defineProps<{
             class="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-white"
           ></div>
 
-          <div
-            class="project-card"
-          >
+          <div class="project-card">
             <div class="flex justify-between items-start mb-4">
               <div>
                 <h3 class="text-xl font-semibold text-white">
@@ -72,11 +68,7 @@ defineProps<{
               </a>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span
-                v-for="tech in item.technologies"
-                :key="tech"
-                class="chip"
-              >
+              <span v-for="tech in item.technologies" :key="tech" class="chip">
                 {{ tech }}
               </span>
             </div>

@@ -7,15 +7,19 @@ defineProps<{
 </script>
 
 <template>
-  <section class="w-full min-h-screen">
+  <section class="w-full">
     <!-- Header -->
-    <div v-if="title" class="px-4 py-4 top-0 z-40 flex">
+    <div
+      v-if="title"
+      class="px-4 py-4 z-40 flex items-center sm:text-4xl text-xl"
+    >
       <ChevronDoubleRightIcon
-        class="sm:w-10 sm:h-10 w-7 h-7 mr-1 text-yellow-500"
+        class="sm:w-10 w-6 mr-1 text-yellow-500"
       />
-      <h2 class="section-title sm:text-4xl text-xl">
+      <h2 class="section-title">
         {{ title }}
       </h2>
+      <slot name="header"></slot>
     </div>
 
     <!-- Content -->

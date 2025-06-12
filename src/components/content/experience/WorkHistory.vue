@@ -6,6 +6,6 @@ import persona from "@/assets/persona.json";
 
 <template>
   <Content id-ref="work">
-    <Timeline title="Work History" :items="persona.experience" />
+    <Timeline :items="persona.experience" />
   </Content>
 </template>
