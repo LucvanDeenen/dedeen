@@ -84,3 +84,10 @@ html {
   scroll-snap-align: center;
 }
 
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
