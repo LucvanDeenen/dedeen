@@ -5,12 +5,11 @@
   "summary": "I’m a dedicated software engineer who enjoys tackling complex problems and integrating new technologies to build meaningful solutions. I have extensive experience in enterprise software development and excel at working with and improving existing codebases while consistently delivering quality results.",
   "interests": [
     "Automation",
-    "Machine Learning",
-    "Java Development",
-    "Frontend",
-    "Game Development",
-    "3D Modelling",
-    "DevTools"
+    "Java",
+    "Spring",
+    "Vue",
+    "Unity",
+    "Blender"
   ],
   "education": [
     {
@@ -40,7 +39,7 @@
       "name": "Backend",
       "skills": [
         { "name": "Java", "level": 5 },
-        { "name": "Spring", "level": 4 },
+        { "name": "Spring Boot", "level": 4 },
         { "name": "Kotlin", "level": 3 },
         { "name": "Visual Basic", "level": 2 },
         { "name": ".NET", "level": 2 },
