@@ -1,6 +1,6 @@
 li,
 p {
-  @apply max-w-[800px];
+  @apply max-w-[800px] text-sm;
 }
 
 li {

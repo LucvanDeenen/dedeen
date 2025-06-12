@@ -86,12 +86,8 @@ onUnmounted(() => {
         `https://${textArray[textIndex].domain}.${textArray[textIndex].tld}`
       "
     >
-      <ChevronDoubleRightIcon
-        class="sm:w-10 sm:h-10 w-7 h-7 mr-1 text-yellow-500"
-      />
-      <h1
-        class="sm:text-4xl text-xl text-slate-100 font-bold uppercase bg-clip-text relative"
-      >
+      <ChevronDoubleRightIcon class="sm:w-10 w-7 mr-1 text-yellow-500" />
+      <h1 class="text-slate-100 font-bold uppercase bg-clip-text relative">
         <span id="title" class="link hover:cursor-pointer">
           {{ textArray[textIndex].domain }} </span
         >.<span class="text-yellow-500">{{ textArray[textIndex].tld }}</span>

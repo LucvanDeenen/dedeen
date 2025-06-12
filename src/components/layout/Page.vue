@@ -14,7 +14,7 @@ defineProps<{
       class="px-4 py-4 z-40 flex items-center sm:text-4xl text-xl"
     >
       <ChevronDoubleRightIcon
-        class="sm:w-10 w-6 mr-1 text-yellow-500"
+        class="sm:w-10 w-10 mr-1 text-yellow-500"
       />
       <h2 class="section-title">
         {{ title }}
