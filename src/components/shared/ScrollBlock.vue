@@ -19,6 +19,7 @@ const project = props.project ?? undefined;
     }"
   >
     <div v-if="project">
+      <!-- Content -->
       <div class="absolute top-0 right-0 mr-2 mt-4">
         <!-- GitHub Icon -->
         <a
@@ -84,20 +85,33 @@ const project = props.project ?? undefined;
           </svg>
         </a>
       </div>
-      <h3 class="mb-0 text-yellow-500">{{ project.title }}</h3>
-      <p>{{ project.summary }}</p>
 
-      <div class="py-3">
-        <p v-for="line in project.description">- {{ line }}</p>
-      </div>
-      <br />
+      <!-- Title -->
+      <h3 class="mb-0 text-yellow-500">{{ project.title }}</h3>
+      <p>{{ project.subtitle }}</p>
+
+      <!-- Details -->
+      <div class="pb-2" v-for="line in project.description">- {{ line }}</div>
+
+      <!-- Technologies -->
+      <!-- <div>
+        <div class="flex flex-wrap gap-3">
+          <span
+            v-for="technology in project.technologies"
+            :key="technology"
+            class="chip"
+          >
+            {{ technology }}
+          </span>
+        </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <style lang="css" scoped>
 .content {
-  @apply min-h-[400px] max-h-[400px] sm:min-h-[500px] sm:max-h-[500px] min-w-[85vw];
+  @apply min-h-[350px] max-h-[350px] sm:min-h-[500px] sm:max-h-[500px] min-w-[85vw];
   @apply rounded px-6 pt-3 bg-neutral-800 select-none;
 }
 
