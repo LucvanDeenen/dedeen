@@ -22,10 +22,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Debug network and install deps
+      - name: Debug network and install deps (with retry)
         run: |
           npm config set loglevel verbose
-          npm ci
+          for i in 1 2 3; do
+            echo "Attempt $i: npm ci"
+            if npm ci; then
+              echo "npm ci succeeded"
+              break
+            fi
+            echo "npm ci failed, retrying in 10 seconds..."
+            sleep 10
+          done
 
       - name: Build the project
         run: npm run build
