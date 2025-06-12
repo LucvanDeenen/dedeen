@@ -14,8 +14,10 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install dependencies
-        run: npm install
+      - name: Debug network
+        run: |
+          npm config set loglevel verbose
+          npm install
 
       - name: Build the project
         run: npm run build
