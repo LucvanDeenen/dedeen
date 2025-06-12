@@ -22,9 +22,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Debug network and install deps (with retry)
+      - name: Install dependencies
         run: |
-          npm config set loglevel verbose
           for i in 1 2 3; do
             echo "Attempt $i: npm ci"
             if npm ci; then
