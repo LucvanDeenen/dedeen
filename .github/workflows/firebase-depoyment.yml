@@ -14,9 +14,6 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Use npm 9.x
-        run: npm install -g npm@9
-
       - name: Cache npm
         uses: actions/cache@v4
         with:
@@ -28,12 +25,12 @@ jobs:
       - name: Install dependencies
         run: |
           for i in 1 2 3; do
-            echo "Attempt $i: npm ci"
-            if npm ci; then
-              echo "npm ci succeeded"
+            echo "Attempt $i: npm install"
+            if npm install; then
+              echo "npm install succeeded"
               break
             fi
-            echo "npm ci failed, retrying in 10 seconds..."
+            echo "npm install failed, retrying in 10 seconds..."
             sleep 10
           done
 
