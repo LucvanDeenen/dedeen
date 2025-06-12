@@ -14,7 +14,7 @@ import persona from "@/assets/persona.json";
       <div
         v-for="category in persona.skills"
         :key="category.name"
-        class="project-card"
+        class="project-card border-l-4 border-yellow-500"
       >
         <h4>
           {{ category.name }}

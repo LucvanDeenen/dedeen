@@ -29,9 +29,8 @@
       "demo": "https://auth-app-9o2.pages.dev/"
     },
     "description": [
-      "An authentication portal designed to integrate authentication and user management for hobby projects.",
-      "Features a simple and secure login system.",
-      "Built with modern web technologies for easy integration."
+      "Authentication portal for integrating user management into hobby projects.",
+      "Simple, secure login system built with modern web technologies."
     ],
     "technologies": [
       "Vue 3",
@@ -55,8 +54,7 @@
     "description": [
       "Build an application for keeping track of scores in party games.",
       "Setup authentication and storage in firebase.",
-      "Created an android App for Smart TV's to showcase the hiscores and games on your TV!",
-      "Used different AI tools like, ChatGPT and Bolt to see how fast development can be when making the most of these tools."
+      "Created an android App for Smart TV's to showcase the hiscores and games on your TV!"
     ],
     "technologies": [
       "Vue 3",
@@ -64,7 +62,6 @@
       "Firebase",
       "Github Actions",
       "Kotlin",
-      "Android Studio",
       "Bolt"
     ]
   },

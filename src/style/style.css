@@ -39,7 +39,7 @@
     @apply px-3 py-1 bg-neutral-800 border text-gray-300 rounded-full text-sm;
   }
   .project-card {
-    @apply rounded-lg shadow-md p-8 hover:shadow-xl transition-all duration-300 bg-neutral-800;
+    @apply rounded shadow-md p-8 hover:shadow-xl transition-all duration-300 bg-neutral-800;
   }
   .button-icon {
     @apply w-10 h-10 rounded-full border bg-neutral-800 flex items-center justify-center;

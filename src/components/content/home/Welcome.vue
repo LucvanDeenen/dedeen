@@ -113,7 +113,7 @@ onUnmounted(() => {
         class="hover:text-white transition-colors duration-200"
       >
         <svg
-          class="w-4 h-4 sm:w-5 sm:h-5"
+          class="w-5"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
@@ -128,7 +128,7 @@ onUnmounted(() => {
         class="hover:text-white transition-colors duration-200"
       >
         <svg
-          class="w-4 h-4 sm:w-5 sm:h-5"
+          class="w-5"
           viewBox="0 0 24 24"
           fill="currentColor"
         >

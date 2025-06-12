@@ -94,8 +94,8 @@ const project = props.project ?? undefined;
       <div class="pb-2" v-for="line in project.description">- {{ line }}</div>
 
       <!-- Technologies -->
-      <!-- <div>
-        <div class="flex flex-wrap gap-3">
+      <div class="mt-3">
+        <div class="flex flex-wrap gap-2">
           <span
             v-for="technology in project.technologies"
             :key="technology"
@@ -104,14 +104,14 @@ const project = props.project ?? undefined;
             {{ technology }}
           </span>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="css" scoped>
 .content {
-  @apply min-h-[350px] max-h-[350px] sm:min-h-[500px] sm:max-h-[500px] min-w-[85vw];
+  @apply min-h-[425px] max-h-[425px] sm:min-h-[500px] sm:max-h-[500px] min-w-[85vw];
   @apply rounded px-6 pt-3 bg-neutral-800 select-none;
 }
 
@@ -120,6 +120,7 @@ const project = props.project ?? undefined;
 }
 
 .border-animate::before {
+  @apply bg-yellow-500;
   content: "";
   position: absolute;
   left: 0;
@@ -127,7 +128,6 @@ const project = props.project ?? undefined;
   transform: translateY(-50%);
   width: 4px;
   height: 0%;
-  background-color: #facc15; /* yellow-500 */
   transition: height 300ms ease;
 }
 
