@@ -4,17 +4,19 @@ import persona from "@/assets/persona.json";
 </script>
 
 <template>
-  <Content id-ref="education" class="mb-12">
+  <Content id-ref="education">
     <h3 class="text-gray-500">// Education</h3>
     <div class="space-y-6">
       <div v-for="edu in persona.education" :key="edu.school">
         <div class="flex justify-between items-start mb-4">
           <div>
-            <h4>
+            <h4 class="text-yellow-500">
               {{ edu.school }}
             </h4>
-            <p>{{ edu.degree }}</p>
-	          <p>{{ edu.period }}</p>
+            <div class="flex justify-between">
+              <p>{{ edu.degree }}</p>
+              <p class="text-gray-500">{{ edu.period }}</p>
+            </div>
           </div>
         </div>
         <p class="mb-4">

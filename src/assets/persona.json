@@ -3,14 +3,7 @@
   "workEmail": "lvandeenen@ilionx.com",
   "location": "Maastricht (NL)",
   "summary": "I’m a dedicated software engineer who enjoys tackling complex problems and integrating new technologies to build meaningful solutions. I have extensive experience in enterprise software development and excel at working with and improving existing codebases while consistently delivering quality results.",
-  "interests": [
-    "Automation",
-    "Java",
-    "Spring",
-    "Vue",
-    "Unity",
-    "Blender"
-  ],
+  "interests": ["Automation", "Java", "Spring", "Vue", "Unity", "Blender"],
   "education": [
     {
       "school": "ZUYD University of Applied Sciences",
@@ -63,8 +56,8 @@
   "experience": [
     {
       "title": "ilionx Group B.V.",
-      "subtitle": "Software Engineer / Software Consultant",
-      "period": "2022 - Present",
+      "subtitle": "Software Engineer",
+      "period": "jun. 2022 - Present",
       "description": [
         "I am currently working as a consultant for VodafoneZiggo’s NaaS unit, where I started as a member of the development team and progressed to lead developer, overseeing team operations and project delivery. My daily responsibilities include process automation, system integration, and contributing to the development of innovative enterprise solutions.",
         "Enhanced the functionality of 'Partner in Balans', a healthcare application, by implementing significant improvements across both the frontend and backend systems."
@@ -82,7 +75,7 @@
     {
       "title": "LUC B.V.",
       "subtitle": "Software Engineer",
-      "period": "2021 - 2022",
+      "period": "sept. 2021 - may 2022",
       "description": [
         "Contributed to the development and optimization of an in-house fat client application to streamline and enhance the production workflow.",
         "Led the development of a new system architecture to revamp and modernize the fat client application."

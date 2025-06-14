@@ -16,7 +16,7 @@ import persona from "@/assets/persona.json";
         :key="category.name"
         class="project-card border-l-4 border-yellow-500"
       >
-        <h4>
+        <h4 class="text-yellow-500">
           {{ category.name }}
         </h4>
         <div class="space-y-4">
@@ -31,7 +31,7 @@ import persona from "@/assets/persona.json";
             </div>
             <div class="h-2 bg-gray-600 rounded-full overflow-hidden">
               <div
-                class="h-full bg-yellow-500 rounded-full transition-all duration-300"
+                class="h-full bg-gray-300 rounded-full transition-all duration-300"
                 :style="{ width: `${(skill.level / 5) * 100}%` }"
               ></div>
             </div>

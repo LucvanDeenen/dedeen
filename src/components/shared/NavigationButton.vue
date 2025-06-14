@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { defineEmits, defineProps } from "vue";
-
 const props = defineProps<{
   left: boolean;
 }>();

@@ -30,16 +30,16 @@ defineProps<{
           <div class="project-card">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h3 class="text-xl font-semibold text-white">
+                <h3 class="text-xl font-semibold text-yellow-500 mb-0 pb-1">
                   {{ item.title }}
                 </h3>
-                <p class="text-gray-400">
+                <p class="mb-0 pb-0">
                   {{ item.subtitle }}
                 </p>
+                <p v-if="item.period" class="text-gray-400 mb-0 pb-0">
+                  {{ item.period }}
+                </p>
               </div>
-              <span v-if="item.period" class="text-gray-400">{{
-                item.period
-              }}</span>
             </div>
             <ul class="list-disc list-inside mb-4 text-gray-300 space-y-2">
               <li v-for="(desc, i) in item.description" :key="i">{{ desc }}</li>
