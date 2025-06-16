@@ -9,7 +9,7 @@ const project = props.project ?? undefined;
 
 <template>
   <div
-    class="scroll-card"
+    class="content"
     :class="{
       'border-animate border-animate-active': props.selected,
       'border-animate': !props.selected,
@@ -108,6 +108,10 @@ const project = props.project ?? undefined;
 </template>
 
 <style lang="css" scoped>
+.content {
+  @apply min-h-[425px] max-h-[425px] sm:min-h-[500px] sm:max-h-[500px] min-w-[85vw];
+  @apply rounded px-6 pt-3 bg-neutral-800 select-none;
+}
 
 .content-image {
   @apply bg-cover bg-center;
