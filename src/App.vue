@@ -28,8 +28,6 @@ onMounted(() => {
         if (entry.isIntersecting && !scrolling.value) {
           activeSection.value = entry.target.id;
           loadedSections.value[entry.target.id] = true;
-        } else {
-          loadedSections.value[entry.target.id] = false;
         }
       });
     },
