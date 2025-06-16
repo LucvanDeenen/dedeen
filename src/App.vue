@@ -10,6 +10,7 @@ import { ChevronDoubleUpIcon } from "@heroicons/vue/24/solid";
 
 const activeSection = ref("home-page");
 const targetSection = ref();
+const scrolling = ref(false);
 const loadedSections = ref<Record<string, boolean>>({});
 const updateSection = (sectionId: string) => {
   targetSection.value = sectionId;
@@ -24,9 +25,11 @@ onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !scrolling.value) {
           activeSection.value = entry.target.id;
           loadedSections.value[entry.target.id] = true;
+        } else {
+          loadedSections.value[entry.target.id] = false;
         }
       });
     },
@@ -44,8 +47,13 @@ watch(targetSection, async (target) => {
     const offset = window.innerHeight / 8;
     const top = el.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top, behavior: "smooth" });
+    scrolling.value = true;
     activeSection.value = target;
     targetSection.value = null;
+
+    setTimeout(() => {
+      scrolling.value = false;
+    }, 500);
   }
 });
 provide("app", { updateSection });
@@ -54,12 +62,12 @@ provide("app", { updateSection });
 <template>
   <div class="overflow-x-hidden">
     <div
-      class="fixed bottom-5 right-5 z-50 transition-all opacity-0"
+      class="fixed bottom-5 right-5 sm:right-[10%] sm:bottom-10 z-50 transition-all opacity-0"
       :class="{ 'opacity-100': activeSection !== 'home-page' }"
       @click="updateSection('home-page')"
     >
       <button class="button-icon hover:border-yellow-500 hover:text-yellow-500">
-        <ChevronDoubleUpIcon class="w-5 h-5" />
+        <ChevronDoubleUpIcon class="w-5 sm:w-7" />
       </button>
     </div>
     <HomePage id="home-page" class="mb-12" />

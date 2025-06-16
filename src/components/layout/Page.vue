@@ -11,7 +11,7 @@ defineProps<{
     <!-- Header -->
     <div
       v-if="title"
-      class="px-4 py-4 z-40 flex items-center sm:text-4xl text-xl"
+      class="px-4 py-4 z-40 flex items-center sm:text-4xl text-xl mb-1 sm:mb-8"
     >
       <ChevronDoubleRightIcon
         class="sm:w-10 w-10 mr-1 text-yellow-500"
