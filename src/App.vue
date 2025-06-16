@@ -25,7 +25,7 @@ onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && !scrolling.value) {
+        if (entry.isIntersecting) {
           activeSection.value = entry.target.id;
           loadedSections.value[entry.target.id] = true;
         }
@@ -64,7 +64,10 @@ provide("app", { updateSection });
       :class="{ 'opacity-100': activeSection !== 'home-page' }"
       @click="updateSection('home-page')"
     >
-      <button class="button-icon hover:border-yellow-500 hover:text-yellow-500">
+      <button
+        class="button-icon hover:border-yellow-500 hover:text-yellow-500"
+        v-if="!scrolling"
+      >
         <ChevronDoubleUpIcon class="w-5 sm:w-7" />
       </button>
     </div>
