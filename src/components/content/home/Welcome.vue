@@ -6,7 +6,7 @@ import Content from "@/components/layout/Content.vue";
 import CodeBlock from "@/components/shared/CodeBlock.vue";
 
 import projects from "@/assets/projects.json";
-import sections from "@/assets/sections.json";
+import content from "@/assets/content.json";
 import { getUser } from "auth-client";
 import { User } from "auth-client/dist/types/incoming";
 
@@ -18,13 +18,15 @@ type Title = {
 };
 
 const textArray: Array<Title> = projects;
-const block = sections;
+const block = content.sections;
+const greetings = content.greetings;
 
 const letters: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const currentDescription = ref("");
 const textIndex = ref(0);
 const user: Ref<User | undefined> = ref(undefined);
 const userComputed = computed(() => user.value);
+const greeting = ref("");
 
 let interval: ReturnType<typeof setInterval> | null = null;
 let animation: ReturnType<typeof setInterval> | null = null;
@@ -65,6 +67,7 @@ onMounted(async () => {
   await getUser()
     .then((res) => (user.value = res))
     .catch();
+  greeting.value = greetings[Math.floor(Math.random() * greetings.length)];
 
   animateText(title!, description!);
   interval = setInterval(() => {
@@ -119,7 +122,7 @@ onUnmounted(() => {
         class="opacity-0 transition-opacity duration-500 ml-3"
         :class="{ 'opacity-100': userComputed }"
       >
-        Welcome back {{ userComputed?.username }}!
+        {{ greeting }} {{ userComputed?.username }}!
       </p>
       <div class="flex gap-3 text-gray-600">
         <a

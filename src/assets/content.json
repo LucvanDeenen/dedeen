@@ -1,0 +1,42 @@
+{
+  "sections": [
+    {
+      "section": "about-page",
+      "link": "aboutMe",
+      "description": "",
+      "sublinks": [
+        {
+          "section": "skills",
+          "link": "skills",
+          "description": "Technical skills"
+        },
+        {
+          "section": "education",
+          "link": "education",
+          "description": "Degrees"
+        }
+      ]
+    },
+    {
+      "section": "project-page",
+      "link": "projects",
+      "description": "My hobby apps"
+    },
+    {
+      "section": "experience-page",
+      "link": "work",
+      "description": "What I do"
+    },
+    {
+      "section": "contact-page",
+      "link": "contact",
+      "description": "Info"
+    }
+  ],
+  "greetings": [
+    "Hey",
+    "Greetings",
+    "Good to see you",
+    "Welcome back"
+  ]
+}
