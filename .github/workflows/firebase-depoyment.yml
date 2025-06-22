@@ -15,18 +15,6 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install dependencies
-        run: |
-          for i in 1 2 3; do
-            echo "Attempt $i: npm install"
-            if npm install; then
-              echo "npm install succeeded"
-              break
-            fi
-            echo "npm install failed, retrying in 10 seconds..."
-            sleep 10
-          done
-
       - name: Build the project
         run: |
           git config --global url."https://${{ secrets.GH_PAT }}@github.com/".insteadOf ssh://git@github.com/
