@@ -109,7 +109,7 @@ const project = props.project ?? undefined;
 
 <style lang="css" scoped>
 .content {
-  @apply min-h-[425px] max-h-[425px] sm:min-h-[500px] sm:max-h-[500px] min-w-[85vw];
+  @apply min-h-[425px] max-h-[425px] sm:min-h-[500px] sm:max-h-[500px] min-w-[85vw] sm:min-w-[500px];
   @apply rounded px-6 pt-3 bg-neutral-800 select-none;
 }
 
