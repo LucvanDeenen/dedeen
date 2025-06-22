@@ -35,7 +35,7 @@ jobs:
           done
 
       - name: Build the project
-        run: npm run build
+        run: npm run build -- --mode=dev
 
       - name: Upload production build
         uses: actions/upload-artifact@v4

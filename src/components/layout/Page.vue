@@ -11,7 +11,7 @@ defineProps<{
     <!-- Header -->
     <div
       v-if="title"
-      class="px-4 py-4 z-40 flex items-center sm:text-4xl text-xl mb-1 sm:mb-8"
+      class="px-4 py-4 z-40 flex items-center sm:text-4xl text-xl mb-1 sm:mb-8 max-w-[1300px] mx-auto"
     >
       <ChevronDoubleRightIcon
         class="sm:w-10 w-10 mr-1 text-yellow-500"
@@ -23,7 +23,7 @@ defineProps<{
     </div>
 
     <!-- Content -->
-    <div :class="{ 'px-6 sm:text-base text-sm': title }">
+    <div :class="{ 'px-6 sm:text-base text-sm max-w-[1300px] mx-auto': title }">
       <slot></slot>
     </div>
   </section>
