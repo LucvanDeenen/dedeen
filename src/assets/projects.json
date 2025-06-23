@@ -2,13 +2,13 @@
   {
     "domain": "dedeen",
     "href": null,
-    "tld": "nl",
+    "tld": "dev",
     "summary": "You are here!",
     "title": "Portfolio Website",
-    "subtitle": "Personal Website - Dedeen.nl",
+    "subtitle": "Personal Website - Dedeen.dev",
     "links": {
       "github": "https://github.com/LucvanDeenen/dedeen",
-      "demo": "https://dedeen.nl/"
+      "demo": "https://dedeen.dev/"
     },
     "description": [
       "A responsive portfolio website built with Vue 3 and Tailwind CSS.",
@@ -18,7 +18,7 @@
     "technologies": ["Vue 3", "TypeScript", "Tailwind CSS", "Github Actions"]
   },
   {
-    "domain": "auth-app-9o2.pages",
+    "domain": "auth.dedeen",
     "href": null,
     "tld": "dev",
     "summary": "Auth portal",
@@ -26,7 +26,7 @@
     "subtitle": "A portal that allows me to integrate user management for my hobby projects",
     "links": {
       "github": "https://github.com/LucvanDeenen/auth-portal",
-      "demo": "https://auth-app-9o2.pages.dev/"
+      "demo": "https://auth.dedeen.dev/"
     },
     "description": [
       "Authentication portal for integrating user management into hobby projects.",
