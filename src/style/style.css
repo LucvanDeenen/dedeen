@@ -12,7 +12,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-900 text-white font-cascadia;
+    @apply bg-neutral-900 text-white font-cascadia gradient;
   }
   section {
     @apply sm:px-8;
