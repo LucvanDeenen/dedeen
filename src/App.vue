@@ -62,7 +62,7 @@ provide("app", { updateSection });
     <div
       class="fixed bottom-5 right-5 sm:right-[10%] sm:bottom-10 z-50 transition-all duration-700 opacity-0 -translate-x-10"
       :class="{ 'opacity-100 translate-x-0': activeSection !== 'home-page' }"
-      @click="updateSection('home-page')" 
+      @click="updateSection('home-page')"
     >
       <button
         class="button-icon hover:border-yellow-500 hover:text-yellow-500"
