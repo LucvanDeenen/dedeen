@@ -7,7 +7,7 @@ import CodeBlock from "@/components/shared/CodeBlock.vue";
 
 import projects from "@/assets/projects.json";
 import content from "@/assets/content.json";
-import { getUserWithRefresh } from "auth-client";
+import { getUserId, getUser } from "auth-client";
 import { User } from "auth-client/dist/types/incoming";
 
 type Title = {
@@ -64,8 +64,10 @@ onMounted(async () => {
   const title = document.getElementById("title");
   const description = document.getElementById("description");
 
-  await getUserWithRefresh().then((res) => (user.value = res));
-  greeting.value = greetings[Math.floor(Math.random() * greetings.length)];
+  if (getUserId()) {
+    user.value = await getUser();
+    greeting.value = greetings[Math.floor(Math.random() * greetings.length)];
+  }
 
   animateText(title!, description!);
   interval = setInterval(() => {
