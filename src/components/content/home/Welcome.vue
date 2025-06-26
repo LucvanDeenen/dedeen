@@ -7,7 +7,7 @@ import CodeBlock from "@/components/shared/CodeBlock.vue";
 
 import projects from "@/assets/projects.json";
 import content from "@/assets/content.json";
-import { getUserId, getUser } from "auth-client";
+import { getUserId, getUser, ping } from "auth-client";
 import { User } from "auth-client/dist/types/incoming";
 
 type Title = {
@@ -64,7 +64,7 @@ onMounted(async () => {
   const title = document.getElementById("title");
   const description = document.getElementById("description");
 
-  if (getUserId()) {
+  if (ping()) {
     user.value = await getUser();
     greeting.value = greetings[Math.floor(Math.random() * greetings.length)];
   }
