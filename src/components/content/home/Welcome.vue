@@ -64,10 +64,8 @@ onMounted(async () => {
   const title = document.getElementById("title");
   const description = document.getElementById("description");
 
-  if (await ping()) {
-    user.value = await getUser();
-    greeting.value = greetings[Math.floor(Math.random() * greetings.length)];
-  }
+  user.value = await getUser();
+  greeting.value = greetings[Math.floor(Math.random() * greetings.length)];
 
   animateText(title!, description!);
   interval = setInterval(() => {
