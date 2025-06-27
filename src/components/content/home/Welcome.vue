@@ -7,7 +7,7 @@ import CodeBlock from "@/components/shared/CodeBlock.vue";
 
 import projects from "@/assets/projects.json";
 import content from "@/assets/content.json";
-import { getUser, ping } from "auth-client";
+import { getUser } from "auth-client";
 import { User } from "auth-client/dist/types/incoming";
 
 type Title = {
@@ -64,15 +64,15 @@ onMounted(async () => {
   const title = document.getElementById("title");
   const description = document.getElementById("description");
 
-  user.value = await getUser();
-  greeting.value = greetings[Math.floor(Math.random() * greetings.length)];
-
   animateText(title!, description!);
   interval = setInterval(() => {
     description?.classList.remove("active");
     textIndex.value = (textIndex.value + 1) % textArray.length;
     animateText(title!, description!);
   }, 10000);
+
+  user.value = await getUser();
+  greeting.value = greetings[Math.floor(Math.random() * greetings.length)];
 });
 
 onUnmounted(() => {
