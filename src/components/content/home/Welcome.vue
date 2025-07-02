@@ -7,7 +7,7 @@ import CodeBlock from "@/components/shared/CodeBlock.vue";
 
 import projects from "@/assets/projects.json";
 import content from "@/assets/content.json";
-import { getUser } from "auth-client";
+import { fetchUser, getUser } from "auth-client";
 import { User } from "auth-client/dist/types/incoming";
 
 type Title = {
@@ -71,7 +71,9 @@ onMounted(async () => {
     animateText(title!, description!);
   }, 10000);
 
-  user.value = await getUser();
+  const storedUser = getUser();
+  storedUser ? (user.value = storedUser) : (user.value = await fetchUser());
+
   greeting.value = greetings[Math.floor(Math.random() * greetings.length)];
 });
 

@@ -7,5 +7,6 @@ const auth = createAuthPlugin({
   currentSystem: "auth-portal",
   authFrontend: import.meta.env.VITE_FRONTEND_URL,
   authBackend: import.meta.env.VITE_BACKEND_URL,
+  hmacSecret: ''
 });
 createApp(App).use(auth).mount("#app");
