@@ -12,8 +12,8 @@ import { User } from "auth-client/dist/types/incoming";
 
 type Title = {
   domain: string;
-  tld: string;
   summary: string;
+  tld: string | null;
   href: string | null;
 };
 
@@ -91,7 +91,13 @@ onUnmounted(() => {
     <!-- Title -->
     <a
       class="flex min-w-[200px] transition-all"
-      :target="textArray[textIndex].domain !== 'dedeen' ? '_blank' : '_self'"
+      :target="
+        textArray[textIndex].tld !== null
+          ? textArray[textIndex].domain !== 'dedeen'
+            ? '_blank'
+            : '_self'
+          : undefined
+      "
       :href="
         textArray[textIndex].href ??
         `https://${textArray[textIndex].domain}.${textArray[textIndex].tld}`
@@ -100,8 +106,11 @@ onUnmounted(() => {
       <ChevronDoubleRightIcon class="sm:w-10 w-7 mr-1 text-yellow-500" />
       <h1 class="text-slate-100 font-bold uppercase bg-clip-text relative">
         <span id="title" class="link hover:cursor-pointer">
-          {{ textArray[textIndex].domain }} </span
-        >.<span class="text-yellow-500">{{ textArray[textIndex].tld }}</span>
+          {{ textArray[textIndex].domain }}
+        </span>
+        <span v-if="textArray[textIndex].tld !== null"
+          >.<span class="text-yellow-500">{{ textArray[textIndex].tld }}</span>
+        </span>
       </h1>
     </a>
 

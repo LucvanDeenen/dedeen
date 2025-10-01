@@ -41,6 +41,24 @@
     ]
   },
   {
+    "domain": "Language Guesser",
+    "summary": "¿Cómo estás?",
+    "title": "Language Guesser",
+    "links": {
+      "github": "https://github.com/LucvanDeenen/language-guesser"
+    },
+    "subtitle": "Built as a fun side project to learn more about natural language processing.",
+    "description": [
+      "A python application that uses multiple data sources to guess the language of a given text.",
+      "It makes use of n-grams to make a guess of the language of the provided text.",
+      "It supports the following languages: German, English, French, Italian, Dutch, Russian and Swedish.",
+      "If given more data it can easily be extended to support more languages."
+    ],
+    "technologies": [
+      "Python"
+    ]
+  },
+  {
     "domain": "sjoelen-39112.web",
     "href": null,
     "tld": "app",
@@ -67,7 +85,7 @@
   },
   {
     "domain": "cooking-d8911.web",
-    "href": null,
+    "href": "projects",
     "tld": "app",
     "summary": "Ingredients and meals",
     "title": "Munch",
@@ -87,6 +105,44 @@
       "Firebase",
       "Github Actions",
       "Tailwind"
+    ]
+  },
+  {
+    "domain": "TicTacToe-Algorithm",
+    "summary": "TicTacToe AI",
+    "tld": null,
+    "title": "TicTacToe",
+    "links": {
+      "github": "https://github.com/LucvanDeenen/tic-tac-toe-AI"
+    },
+    "subtitle": "A game of tic tac toe with an implementation of the minimax algorithm",
+    "description": [
+      "The application uses the algorithm to determine the best move for the AI player.",
+      "It is written in Java and uses the processing library.",
+      "Developed as part of my study for software engineering."
+    ],
+    "technologies": [
+      "Java",
+      "Processing"
+    ]
+  },
+  {
+    "domain": "RS-API",
+    "summary": "An API for Runescape",
+    "title": "RS-API",
+    "links": {
+      "github": "https://github.com/LucvanDeenen/rs-api"
+    },
+    "subtitle": "An API for the game Runescape made for practicing with Spring Boot",
+    "description": [
+      "A RESTful API for retrieving data about Runescape skills, bosses and activities.",
+      "Built with Spring Boot and Maven.",
+      "Deployable with the dockerfile."
+    ],
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "Maven"
     ]
   }
 ]
