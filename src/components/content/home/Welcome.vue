@@ -17,7 +17,12 @@ type Title = {
   href: string | null;
 };
 
-const textArray: Array<Title> = projects;
+const textArray: Array<Title> = projects.map((p: any) => ({
+  domain: p.domain,
+  summary: p.summary,
+  tld: p.tld !== undefined ? p.tld : null,
+  href: p.href !== undefined ? p.href : null,
+}));
 const block = content.sections;
 const greetings = content.greetings;
 
