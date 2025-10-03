@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Content from "@/components/layout/Content.vue";
-import projects from "@/assets/projects.json";
 import ScrollBlock from "@/components/shared/ScrollBlock.vue";
 import Pagination from "@/components/shared/Pagination.vue";
 import NavigationButton from "@/components/shared/NavigationButton.vue";
 
 const projectsEl = ref<{ contentEl: HTMLDivElement | null } | null>(null);
 const targetCard = ref(0);
+defineProps<{
+  projects: Array<any>;
+}>();
 
 const scroll = (back: boolean) => {
   const el = projectsEl.value?.contentEl;

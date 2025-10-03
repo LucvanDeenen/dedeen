@@ -3,6 +3,7 @@
     "domain": "dedeen",
     "href": null,
     "tld": "dev",
+    "image": "image.png",
     "summary": "You are here!",
     "title": "Portfolio Website",
     "subtitle": "Personal Website - Dedeen.dev",
@@ -21,6 +22,7 @@
     "domain": "auth.dedeen",
     "href": null,
     "tld": "dev",
+    "image": "image.png",
     "summary": "Auth portal",
     "title": "Auth portal",
     "subtitle": "A portal that allows me to integrate user management for my hobby projects",
@@ -43,6 +45,7 @@
   {
     "domain": "Language Guesser",
     "summary": "¿Cómo estás?",
+    "image": "image.png",
     "title": "Language Guesser",
     "links": {
       "github": "https://github.com/LucvanDeenen/language-guesser"
@@ -62,6 +65,7 @@
     "domain": "sjoelen-39112.web",
     "href": null,
     "tld": "app",
+    "image": "image.png",
     "summary": "Party games tool!",
     "title": "Party App",
     "links": {
@@ -87,6 +91,7 @@
     "domain": "cooking-d8911.web",
     "href": "projects",
     "tld": "app",
+    "image": "image.png",
     "summary": "Ingredients and meals",
     "title": "Munch",
     "links": {
@@ -111,6 +116,7 @@
     "domain": "TicTacToe-Algorithm",
     "summary": "TicTacToe AI",
     "tld": null,
+    "image": "image.png",
     "title": "TicTacToe",
     "links": {
       "github": "https://github.com/LucvanDeenen/tic-tac-toe-AI"
@@ -129,6 +135,7 @@
   {
     "domain": "RS-API",
     "summary": "An API for Runescape",
+    "image": "image.png",
     "title": "RS-API",
     "links": {
       "github": "https://github.com/LucvanDeenen/rs-api"
