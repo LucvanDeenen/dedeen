@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, defineEmits } from "vue";
+import { defineProps, defineEmits, watch, onBeforeUnmount } from "vue";
 
 const props = defineProps<{
   show: boolean;
@@ -9,6 +9,27 @@ const props = defineProps<{
 const emit = defineEmits<{
   (e: "close"): void;
 }>();
+
+const toggleBodyScroll = (enabled: boolean) => {
+  const classList = document.body.classList;
+  if (enabled) {
+    classList.add("overflow-hidden");
+  } else {
+    classList.remove("overflow-hidden");
+  }
+};
+
+watch(
+  () => props.show,
+  (newVal) => {
+    toggleBodyScroll(newVal);
+  },
+  { immediate: true }
+);
+
+onBeforeUnmount(() => {
+  toggleBodyScroll(false);
+});
 </script>
 
 <template>
