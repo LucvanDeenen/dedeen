@@ -132,7 +132,7 @@
     "title": "RS-API",
     "links": {
       "github": "https://github.com/LucvanDeenen/rs-api",
-      "demo": "https://cooking-d8911.web.app/"
+      "demo": "https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/LucvanDeenen/rs-api/main/docs/openapi.yaml"
     },
     "subtitle": "An API for the game Runescape made for practicing with Spring Boot",
     "description": [
