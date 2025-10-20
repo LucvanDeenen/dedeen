@@ -131,7 +131,8 @@
     "summary": "An API for Runescape",
     "title": "RS-API",
     "links": {
-      "github": "https://github.com/LucvanDeenen/rs-api"
+      "github": "https://github.com/LucvanDeenen/rs-api",
+      "demo": "https://cooking-d8911.web.app/"
     },
     "subtitle": "An API for the game Runescape made for practicing with Spring Boot",
     "description": [
@@ -142,6 +143,7 @@
     "technologies": [
       "Java",
       "Spring Boot",
+      "Render",
       "Maven"
     ]
   }
