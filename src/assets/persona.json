@@ -1,9 +1,10 @@
 {
-  "email": "lucvd@hotmail.nl",
-  "workEmail": "lvandeenen@ilionx.com",
+  "email": "luc.vandeenen@outlook.com",
+  "workEmail": "luc.vandeenen@vodafoneziggo.com",
   "location": "Maastricht (NL)",
+  "employer": "VodafoneZiggo",
   "summary": "I’m a dedicated software engineer who enjoys tackling complex problems and integrating new technologies to build meaningful solutions. I have extensive experience in enterprise software development and excel at working with and improving existing codebases while consistently delivering quality results.",
-  "interests": ["Automation", "Java", "Spring", "Vue", "Unity", "Blender"],
+  "interests": ["Automation", "Java", "Spring", "Vue", "Kotlin", "DevOps"],
   "education": [
     {
       "school": "ZUYD University of Applied Sciences",
@@ -22,7 +23,7 @@
       "name": "Frontend",
       "skills": [
         { "name": "Vue.js", "level": 4 },
-        { "name": "Tailwind", "level": 2 },
+        { "name": "Tailwind", "level": 3 },
         { "name": "TypeScript", "level": 3 },
         { "name": "Angular", "level": 2 },
         { "name": "React", "level": 2 }
@@ -44,8 +45,8 @@
     {
       "name": "DevOps",
       "skills": [
-        { "name": "Kubernetes", "level": 3 },
-        { "name": "Helm", "level": 2 },
+        { "name": "Kubernetes", "level": 4 },
+        { "name": "Helm", "level": 3 },
         { "name": "Docker", "level": 4 },
         { "name": "CI/CD", "level": 4 },
         { "name": "Gitlab/Github CI", "level": 5 },
@@ -55,9 +56,21 @@
   ],
   "experience": [
     {
+      "title": "VodafoneZiggo Group B.V.",
+      "subtitle": "Senior Developer",
+      "period": "jan. 2026 - Present",
+      "description": [
+        "In my role as a Senior Developer, I serve as the central point of contact for development and technical content within the development domain. ",
+        "I am responsible for orchestrating development activities and act as the go-to person for developers.",
+        "To enable this, I work closely with Solution Architects and Product Owners to align on technical decisions and translate architecture and requirements into implementation.",
+        "I am also currently team lead of one of the where I further try improve and enable development."
+      ],
+      "technologies": ["Spring", "Java", ".NET", "C#", "AWS"]
+    },
+    {
       "title": "ilionx Group B.V.",
       "subtitle": "Software Engineer",
-      "period": "jun. 2022 - Present",
+      "period": "jun. 2022 - dec. 2025",
       "description": [
         "I am currently working as a consultant for VodafoneZiggo’s NaaS unit, where I started as a member of the development team and progressed to lead developer, overseeing team operations and project delivery. My daily responsibilities include process automation, system integration, and contributing to the development of innovative enterprise solutions.",
         "Enhanced the functionality of 'Partner in Balans', a healthcare application, by implementing significant improvements across both the frontend and backend systems."

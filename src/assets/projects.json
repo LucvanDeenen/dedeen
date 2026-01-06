@@ -15,7 +15,7 @@
       "Setup automatic deployment with Github Actions and Firebase hosting.",
       "Optimized for performance and accessibility."
     ],
-    "technologies": ["Vue 3", "TypeScript", "Tailwind CSS", "Github Actions"]
+    "technologies": ["Vue 3", "TypeScript", "Tailwind CSS", "CI/CD"]
   },
   {
     "domain": "auth.dedeen",
@@ -36,7 +36,7 @@
       "Vue 3",
       "TypeScript",
       "Tailwind CSS",
-      "Github Actions",
+      "CI/CD",
       "Cloudflare"
     ]
   },
@@ -78,7 +78,7 @@
       "Vue 3",
       "TypeScript",
       "Firebase",
-      "Github Actions",
+      "CI/CD",
       "Kotlin",
       "Bolt"
     ]
@@ -103,7 +103,7 @@
       "Vue 3",
       "TypeScript",
       "Firebase",
-      "Github Actions",
+      "CI/CD",
       "Tailwind"
     ]
   },

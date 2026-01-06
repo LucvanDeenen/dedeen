@@ -82,8 +82,8 @@ import Content from "@/components/layout/Content.vue";
             />
           </svg>
           <span class="text-gray-400 cursor-default"
-            ><b class="text-yellow-500">ilionx</b>,
-            {{ contactInfo.location }}</span
+            ><b class="text-yellow-500">{{ contactInfo.employer }}</b
+            >, {{ contactInfo.location }}</span
           >
         </div>
       </div>
