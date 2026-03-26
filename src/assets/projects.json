@@ -18,6 +18,21 @@
     "technologies": ["Vue 3", "TypeScript", "Tailwind CSS", "CI/CD"]
   },
   {
+    "href": null,
+    "tld": "dev",
+    "summary": "Project tool",
+    "title": "Shelf",
+    "subtitle": "A portal that allows me to integrate user management for my hobby projects",
+    "links": {
+      "github": "https://github.com/LucvanDeenen/shelf",
+      "demo": "https://github.com/LucvanDeenen/shelf/releases"
+    },
+    "description": [
+      "A tool for quickly accessing projects on your local machine."
+    ],
+    "technologies": ["Vue 3", "TypeScript", "Tailwind CSS", "CI/CD", "Electron"]
+  },
+  {
     "domain": "auth.dedeen",
     "href": null,
     "tld": "dev",
@@ -54,9 +69,7 @@
       "It supports the following languages: German, English, French, Italian, Dutch, Russian and Swedish.",
       "If given more data it can easily be extended to support more languages."
     ],
-    "technologies": [
-      "Python"
-    ]
+    "technologies": ["Python"]
   },
   {
     "domain": "sjoelen-39112.web",
@@ -99,13 +112,7 @@
       "The recipes contain step-by-step instructions on how to make them.",
       "Setup storage using and deployed with firebase."
     ],
-    "technologies": [
-      "Vue 3",
-      "TypeScript",
-      "Firebase",
-      "CI/CD",
-      "Tailwind"
-    ]
+    "technologies": ["Vue 3", "TypeScript", "Firebase", "CI/CD", "Tailwind"]
   },
   {
     "domain": "TicTacToe-Algorithm",
@@ -121,10 +128,7 @@
       "It is written in Java and uses the processing library.",
       "Developed as part of my study for software engineering."
     ],
-    "technologies": [
-      "Java",
-      "Processing"
-    ]
+    "technologies": ["Java", "Processing"]
   },
   {
     "domain": "RS-API",
@@ -140,11 +144,6 @@
       "Built with Spring Boot and Maven.",
       "Deployable with the dockerfile."
     ],
-    "technologies": [
-      "Java",
-      "Spring Boot",
-      "Render",
-      "Maven"
-    ]
+    "technologies": ["Java", "Spring Boot", "Render", "Maven"]
   }
 ]

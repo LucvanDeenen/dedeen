@@ -23,8 +23,8 @@
       "name": "Frontend",
       "skills": [
         { "name": "Vue.js", "level": 4 },
+        { "name": "TypeScript", "level": 4 },
         { "name": "Tailwind", "level": 3 },
-        { "name": "TypeScript", "level": 3 },
         { "name": "Angular", "level": 2 },
         { "name": "React", "level": 2 }
       ]
@@ -34,10 +34,7 @@
       "skills": [
         { "name": "Java", "level": 5 },
         { "name": "Spring Boot", "level": 4 },
-        { "name": "Kotlin", "level": 3 },
-        { "name": "Visual Basic", "level": 2 },
-        { "name": ".NET", "level": 2 },
-        { "name": "Python", "level": 2 },
+        { "name": ".NET", "level": 4 },
         { "name": "Node.js", "level": 3 },
         { "name": "C#", "level": 3 }
       ]
@@ -45,12 +42,11 @@
     {
       "name": "DevOps",
       "skills": [
+        { "name": "Gitlab/Github CI", "level": 5 },
         { "name": "Kubernetes", "level": 4 },
         { "name": "Helm", "level": 3 },
         { "name": "Docker", "level": 4 },
-        { "name": "CI/CD", "level": 4 },
-        { "name": "Gitlab/Github CI", "level": 5 },
-        { "name": "Jenkins", "level": 2 }
+        { "name": "CI/CD", "level": 4 }
       ]
     }
   ],
