@@ -18,11 +18,10 @@
     "technologies": ["Vue 3", "TypeScript", "Tailwind CSS", "CI/CD"]
   },
   {
-    "href": null,
-    "tld": "dev",
+    "domain": "Shelf"
     "summary": "Project tool",
     "title": "Shelf",
-    "subtitle": "A portal that allows me to integrate user management for my hobby projects",
+    "subtitle": "A small tool setup to improve my development WoW.",
     "links": {
       "github": "https://github.com/LucvanDeenen/shelf",
       "demo": "https://github.com/LucvanDeenen/shelf/releases"
