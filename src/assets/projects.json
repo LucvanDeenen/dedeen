@@ -18,7 +18,7 @@
     "technologies": ["Vue 3", "TypeScript", "Tailwind CSS", "CI/CD"]
   },
   {
-    "domain": "Shelf"
+    "domain": "Shelf",
     "summary": "Project tool",
     "title": "Shelf",
     "subtitle": "A small tool setup to improve my development WoW.",
