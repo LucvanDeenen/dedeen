@@ -33,10 +33,10 @@
       "name": "Backend",
       "skills": [
         { "name": "Java", "level": 5 },
+        { "name": "C#", "level": 5 },
         { "name": "Spring Boot", "level": 4 },
         { "name": ".NET", "level": 4 },
-        { "name": "Node.js", "level": 3 },
-        { "name": "C#", "level": 3 }
+        { "name": "Node.js", "level": 3 }
       ]
     },
     {
@@ -59,7 +59,7 @@
         "In my role as a Senior Developer, I serve as the central point of contact for development and technical content within the development domain. ",
         "I am responsible for orchestrating development activities and act as the go-to person for developers.",
         "To enable this, I work closely with Solution Architects and Product Owners to align on technical decisions and translate architecture and requirements into implementation.",
-        "I am also currently team lead of one of the where I further try improve and enable development."
+        "I am also currently team lead of one of the teams in the department. Where I further guide development."
       ],
       "technologies": ["Spring", "Java", ".NET", "C#", "AWS"]
     },
