@@ -55,6 +55,20 @@
     ]
   },
   {
+    "domain": "Summoners bot",
+    "summary": "Discord bot",
+    "title": "Summoners bot",
+    "subtitle": "A small bot to test scalability and performance of small scale applications.",
+    "links": {
+      "github": "https://github.com/LucvanDeenen/summoners-bot",
+      "demo": "https://github.com/LucvanDeenen/summoners-bot"
+    },
+    "description": [
+      "A discord bot hosted on my raspberry pi at home."
+    ],
+    "technologies": ["TypeScript", "CI/CD"]
+  },
+  {
     "domain": "Language Guesser",
     "summary": "¿Cómo estás?",
     "title": "Language Guesser",
