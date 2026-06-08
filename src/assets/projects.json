@@ -18,6 +18,20 @@
     "technologies": ["Vue 3", "TypeScript", "Tailwind CSS", "CI/CD"]
   },
   {
+    "domain": "dot-stack",
+    "summary": "Home tooling",
+    "title": "dot-stack",
+    "subtitle": "An assortment of tools made for aiding my development.",
+    "links": {
+      "github": "https://github.com/LucvanDeenen/dot-dev",
+      "demo": "https://github.com/LucvanDeenen/dot-dev"
+    },
+    "description": [
+      "A list of toolings to automate and standardize my setup throughout all devices."
+    ],
+    "technologies": ["Bash"]
+  },
+  {
     "domain": "Shelf",
     "summary": "Project tool",
     "title": "Shelf",
