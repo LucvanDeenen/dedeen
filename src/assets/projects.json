@@ -83,6 +83,20 @@
     "technologies": ["TypeScript", "CI/CD"]
   },
   {
+    "domain": "Logipal",
+    "summary": "Tooling",
+    "title": "Logipal",
+    "links": {
+      "github": "https://github.com/LucvanDeenen/logipal"
+    },
+    "subtitle": "A small tool to display a display of all battery percentages.",
+    "description": [
+      "A python application that displays battery percentages.",
+      "Grouping the multiple interfaces and devices to give a grouped view."
+    ],
+    "technologies": ["Python"]
+  },
+  {
     "domain": "Language Guesser",
     "summary": "¿Cómo estás?",
     "title": "Language Guesser",
