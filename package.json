@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.1.1",
-    "vue": "^3.4.38",
-    "auth-client": "LucvanDeenen/auth-client.git#lib-v1.3.5"
+    "auth-client": "LucvanDeenen/auth-client.git#lib-v1.3.5",
+    "vue": "^3.4.38"
   },
   "devDependencies": {
     "@fontsource/inter": "^5.0.17",
+    "@tailwindcss/postcss": "^4.3.2",
     "@types/node": "^22.15.24",
     "@vitejs/plugin-vue": "^6.0.7",
     "autoprefixer": "^10.4.17",
