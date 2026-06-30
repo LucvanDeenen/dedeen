@@ -27,13 +27,12 @@
       "demo": "https://github.com/LucvanDeenen/dot-goals"
     },
     "description": [
-      "A list of toolings to automate and standardize my setup throughout all devices:",
-      "'dot-goals': Tooling to help developer skills.",
-      "'dot-dev': Auto-installing / sync of workspaces.",
-      "'dot-infra': Auto-deployment on self hosted machines.",
-      "'dot-conf': Private template repository for configuration of other tooling"
+      "dot-goals, Tooling to help developer skills.",
+      "dot-dev, Auto-installing and sync of workspaces.",
+      "dot-infra, Private IaC of self-hosted machines.",
+      "dot-conf(-stack), (Template) Repository for configuration of other tooling."
     ],
-    "technologies": ["Bash"]
+    "technologies": ["Bash", ".NET 10", "Typescript", "IaC", "CI/CD"]
   },
   {
     "domain": "Shelf",
