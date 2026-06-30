@@ -69,6 +69,21 @@
     ]
   },
   {
+    "domain": "Patterns",
+    "summary": "Design patterns",
+    "title": "Patterns",
+    "links": {
+      "github": "https://github.com/LucvanDeenen/patterns"
+    },
+    "subtitle": "Example implementations of all software design patterns.",
+    "description": [
+      "A dotnet solution that implements multiple design patterns.",
+      "Set up as a result of following a design pattern training.",
+      "Alongside with notes and explanations, use cases and ELI5 descriptions to refer to."
+    ],
+    "technologies": [".NET 10"]
+  },
+  {
     "domain": "Summoners bot",
     "summary": "Discord bot",
     "title": "Summoners bot",
