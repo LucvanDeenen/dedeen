@@ -21,13 +21,17 @@
     "domain": "dot-stack",
     "summary": "Home tooling",
     "title": "dot-stack",
-    "subtitle": "An assortment of tools made for aiding my development.",
+    "subtitle": "An assortment of tools made for development.",
     "links": {
       "github": "https://github.com/LucvanDeenen/dot-dev",
-      "demo": "https://github.com/LucvanDeenen/dot-dev"
+      "demo": "https://github.com/LucvanDeenen/dot-goals"
     },
     "description": [
-      "A list of toolings to automate and standardize my setup throughout all devices."
+      "A list of toolings to automate and standardize my setup throughout all devices:",
+      "'dot-goals': Tooling to help developer skills.",
+      "'dot-dev': Auto-installing / sync of workspaces.",
+      "'dot-infra': Auto-deployment on self hosted machines.",
+      "'dot-conf': Private template repository for configuration of other tooling"
     ],
     "technologies": ["Bash"]
   },
