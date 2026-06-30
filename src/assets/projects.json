@@ -32,7 +32,7 @@
       "dot-infra, Private IaC of self-hosted machines.",
       "dot-conf(-stack), (Template) Repository for configuration of other tooling."
     ],
-    "technologies": ["Bash", ".NET 10", "Typescript", "IaC", "CI/CD"]
+    "technologies": ["Bash", ".NET 10", "C#", "Typescript", "IaC", "CI/CD"]
   },
   {
     "domain": "Shelf",
@@ -72,6 +72,21 @@
     ]
   },
   {
+    "domain": "Unity Playground",
+    "summary": "Game Dev",
+    "title": "Playgrounds",
+    "links": {
+      "github": "https://github.com/LucvanDeenen/unity-playground"
+    },
+    "subtitle": "Working on random game development things.",
+    "description": [
+      "Using Blender to create my own assets.",
+      "Using Unity as a game engine.",
+      "Playing around with C# with topics like procedural generation and game design."
+    ],
+    "technologies": ["C#", "Unity", "Blender"]
+  },
+  {
     "domain": "Patterns",
     "summary": "Design patterns",
     "title": "Patterns",
@@ -84,7 +99,7 @@
       "Set up as a result of following a design pattern training.",
       "Alongside with notes and explanations, use cases and ELI5 descriptions to refer to."
     ],
-    "technologies": [".NET 10"]
+    "technologies": [".NET 10", "C#"]
   },
   {
     "domain": "Summoners bot",
