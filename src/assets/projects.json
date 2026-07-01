@@ -23,14 +23,13 @@
     "title": "dot-stack",
     "subtitle": "An assortment of tools made for development.",
     "links": {
-      "github": "https://github.com/LucvanDeenen/dot-dev",
-      "demo": "https://github.com/LucvanDeenen/dot-goals"
+      "github": "https://github.com/LucvanDeenen/dot-dev"
     },
     "description": [
       "dot-goals, Tooling to help developer skills.",
       "dot-dev, Auto-installing and sync of workspaces.",
-      "dot-infra, Private IaC of self-hosted machines.",
-      "dot-conf(-stack), (Template) Repository for configuration of other tooling."
+      "dot-infra, IaC of self-hosted machines.",
+      "dot-conf(-stack), Template-repository for configuration of other tooling."
     ],
     "technologies": ["Bash", ".NET 10", "C#", "Typescript", "IaC", "CI/CD"]
   },
@@ -107,8 +106,7 @@
     "title": "Summoners bot",
     "subtitle": "A small bot to test scalability and performance of small scale applications.",
     "links": {
-      "github": "https://github.com/LucvanDeenen/summoners-bot",
-      "demo": "https://github.com/LucvanDeenen/summoners-bot"
+      "github": "https://github.com/LucvanDeenen/summoners-bot"
     },
     "description": [
       "A discord bot hosted on my raspberry pi at home."
@@ -140,8 +138,7 @@
     "description": [
       "A python application that uses multiple data sources to guess the language of a given text.",
       "It makes use of n-grams to make a guess of the language of the provided text.",
-      "It supports the following languages: German, English, French, Italian, Dutch, Russian and Swedish.",
-      "If given more data it can easily be extended to support more languages."
+      "It supports the following languages: German, English, French, Italian, Dutch, Russian and Swedish."
     ],
     "technologies": ["Python"]
   },
